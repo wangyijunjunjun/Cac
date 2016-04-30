@@ -1,0 +1,55 @@
+#middle_bar{
+    margin-top: 5px;
+    background:#FFE036;
+    height: 40px;
+    width: 100%;
+    margin-top: -15px;
+    text-align: center;
+    line-height: 40px;
+    font-size:16px;text-decoration:none;
+    color: #ffffff;
+}
+
+.navbar{
+    background: #8AD3F3;
+}
+.bottom{
+    position:fixed; bottom:0; left:0; width:100%;
+}
+.bottom-item{
+
+    width:33.33%;
+    height:90px;
+    color: #ffffff;
+    background: #425665;
+    float: left;
+    text-align: center;
+
+}
+
+.bottom_top_text  p{
+    font-size: 13px;
+    margin-top: 6px;
+
+}
+
+.bottom_middle_text  p{
+    font-size: 25px;
+    margin-top: -8px;
+
+}
+
+.bottom_bottom_text  p{
+    font-size: 13px;
+    margin-top: -27px;
+
+}
+.AUDIO{
+    height: 122px;
+    background: #ffffff;
+}
+
+.picker_item{
+    float: left;
+    width: 33.33%;
+}

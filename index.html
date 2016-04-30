@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Cac</title>
+    <link rel="stylesheet" href="lib/css/framework7.css">
+    <link rel="stylesheet" href="lib/css/ionicons.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+<body>
+
+<!-- Statusbar overlay-->
+<div class="statusbar-overlay"></div>
+<!-- Panels Overlay -->
+<div class="panel-overlay"></div>
+<!-- Left Panel with Reveal effect -->
+<div class="panel panel-left panel-reveal">
+    <div class="list-block">
+        <div class="list-group">
+            <ul>
+                <li class="item-content list-panel-all close-panel item-link">
+                    <div class="item-media"><i class="icon ion-ios7-paper"></i></div>
+                    <div class="item-inner">
+                        <div class="item-title">All Contacts</div>
+                    </div>
+                </li>
+                <li class="item-content list-panel-favorites close-panel item-link">
+                    <div class="item-media"><i class="icon ion-ios7-star"></i></div>
+                    <div class="item-inner">
+                        <div class="item-title">Favorites</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<!-- Views-->
+<div class="views">
+    <div class="view view-main navbar-fixed">
+        <div class="navbar theme-white">
+            <div class="navbar-inner">
+                <div class="left">
+                    <a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
+                </div>
+                <div class="center sliding contacts-list-header">CODECALC</div>
+                <div class="right contact-add-link">
+                    <a href="#" class="link icon-only"><i class="icon icon-plus">+</i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="pages">
+            <div data-page="top" class="page">
+                <div class="page-content">
+
+                    <!--三个tab-->
+
+
+
+
+                    <div id="middle_bar"><p>AUDIO</p></div>
+
+
+                    <div class="bottom">
+                        <div class="bottom-item">
+                            <div class="bottom_top_text">
+                                <p>BITRATE</p>
+                            </div>
+
+                            <div class="bottom_middle_text">
+                                <p>91.2</p>
+                            </div>
+                            <div class="bottom_bottom_text">
+                                <p>MB/s</p>
+                            </div>
+
+
+                        </div>
+
+                        <div class="bottom-item" onclick="changeTime();">
+                            <div class="bottom_top_text">
+                                <p>TIME</p>
+                            </div>
+
+                            <div class="bottom_middle_text">
+                                <p>30</p>
+                            </div>
+                            <div class="bottom_bottom_text">
+                                <p>HOURS</p>
+                            </div>
+                        </div>
+
+                        <div class="bottom-item">
+                            <div class="bottom_top_text">
+                                <p>STORAGE SPACE</p>
+                            </div>
+
+                            <div class="bottom_middle_text">
+                                <p>420</p>
+                            </div>
+                            <div class="bottom_bottom_text">
+                                <p>GB</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+</body>
+
+<script type="text/javascript" src="lib/framework7.min.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+<script src="lib/jquery.1.11.3.min.js" type="text/javascript"></script>
+
+</html>
