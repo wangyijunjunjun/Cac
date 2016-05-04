@@ -1,13 +1,18 @@
+body{
+    background-color: #ffffff;
+
+}
+
 #middle_bar{
-    margin-top: 5px;
     background:#FFE036;
     height: 40px;
     width: 100%;
-    margin-top: -15px;
     text-align: center;
     line-height: 40px;
     font-size:16px;text-decoration:none;
     color: #ffffff;
+    margin-top: -15px;
+    z-index: 20;
 }
 
 .navbar{
@@ -17,7 +22,6 @@
     position:fixed; bottom:0; left:0; width:100%;
 }
 .bottom-item{
-
     width:33.33%;
     height:90px;
     color: #ffffff;
@@ -53,3 +57,23 @@
     float: left;
     width: 33.33%;
 }
+
+.threeBottomPicker{
+    position: fixed;
+    z-index: 0;
+    background-color: #ffffff;
+    height: 100%;
+    width: 100%;
+}
+
+/*#swiper01{*/
+    /*height: 160px;*/
+    /*background-color: #1a1a1a;*/
+    /*width: 33.3%;*/
+    /*overflow: hidden;*/
+/*}*/
+
+/*.swiper-container1{*/
+    /*overflow: hidden;*/
+    /*width: 80px;*/
+/*}*/

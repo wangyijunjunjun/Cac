@@ -1,0 +1,206 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    -ms-touch-action: none;
+}
+
+body,ul,li {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+/*body {*/
+    /*font-size: 12px;*/
+    /*font-family: ubuntu, helvetica, arial;*/
+    /*overflow: hidden; !* this is important to prevent the whole page to bounce *!*/
+/*}*/
+
+
+#wrapper {
+    position: absolute;
+    z-index: 1;
+    top: 350px;
+    bottom: 480px;
+    left: 0;
+    /*height: 100px;*/
+    margin: 45px 0;
+    width: 100px;
+    background-color: #000;
+    height: 150px;
+    background: #ccc;
+    overflow: hidden;
+}
+
+#wrapper02 {
+    position: absolute;
+    z-index: 1;
+    top: 350px;
+    bottom: 480px;
+    left: 130px;
+    /*height: 100px;*/
+    margin: 45px 0;
+    width:100px;
+    background-color: #000;
+    height: 150px;
+    background: #ccc;
+    overflow: hidden;
+}
+
+#wrapper03 {
+    position: absolute;
+    z-index: 1;
+    top: 350px;
+    bottom: 420px;
+    left: 260px;
+    /*height: 100px;*/
+    margin: 45px 0;
+    width:100px;
+    background-color: #000;
+    height: 150px;
+    background: #ccc;
+    overflow: hidden;
+}
+
+
+#scroller {
+    /*height: 300px;*/
+    position: absolute;
+    z-index: 1;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    width: 100%;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    -o-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+#scroller ul {
+    /*height: 300px;*/
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: left;
+}
+
+#scroller li {
+    padding: 0 10px;
+    height: 40px;
+    line-height: 40px;
+    /*	border-bottom: 1px solid #ccc;
+        border-top: 1px solid #fff;*/
+    background-color: #fff;
+    font-size: 14px;
+}
+
+#scroller02 {
+    /*height: 300px;*/
+    position: absolute;
+    z-index: 1;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    width: 100%;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    -o-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+#scroller02 ul {
+    /*height: 300px;*/
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: left;
+}
+
+#scroller02 li {
+    padding: 0 10px;
+    height: 40px;
+    line-height: 40px;
+    /*	border-bottom: 1px solid #ccc;
+        border-top: 1px solid #fff;*/
+    background-color: #fff;
+    font-size: 14px;
+}
+
+
+#scroller03 {
+    /*height: 300px;*/
+    position: absolute;
+    z-index: 1;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    width: 100%;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    -o-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+#scroller03 ul {
+    /*height: 300px;*/
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: left;
+}
+
+#scroller03 li {
+    padding: 0 10px;
+    height: 40px;
+    line-height: 40px;
+    /*	border-bottom: 1px solid #ccc;
+        border-top: 1px solid #fff;*/
+    background-color: #fff;
+    font-size: 14px;
+}
+
+
+#datemark{font-size: 18px;left:5%;width: 90%;height: 30px;position:absolute;top:212px;background:#000;filter:alpha(opacity=30);
+    -moz-opacity:0.3;
+    opacity:0.3;border:1px solid #eee;z-index: 100}
+
+#fuck{
+    height: 200px;
+    width: 100%;
+    background: #ffffff;
+}

@@ -9,11 +9,13 @@
     <title>Cac</title>
     <link rel="stylesheet" href="lib/css/framework7.css">
     <link rel="stylesheet" href="lib/css/ionicons.css">
+    <link rel="stylesheet" href="lib/css/swiper-3.3.1.min.css">
     <link rel="stylesheet" href="css/style.css">
-
-
+    <link rel="stylesheet" href="css/swiper.css">
+    <link rel="stylesheet" href="css/tabs.css">
+    <!--<link rel="stylesheet" href="css/myScroll.css">-->
 </head>
-<body>
+<body onload="loaded()" style="width:100%;height:100%;background-color:#ffffff">
 
 <!-- Statusbar overlay-->
 <div class="statusbar-overlay"></div>
@@ -41,7 +43,6 @@
     </div>
 </div>
 
-
 <!-- Views-->
 <div class="views">
     <div class="view view-main navbar-fixed">
@@ -57,72 +58,311 @@
             </div>
         </div>
 
+
         <div class="pages">
             <div data-page="top" class="page">
                 <div class="page-content">
 
                     <!--三个tab-->
+                    <div class="tabs">
+                        <ul id="tabs">
+                            <li class="tab-nav-action">CODE</li>
+                            <li class="tab-nav">CAC</li>
+                            <li class="tab-nav">VIDEO</li>
+                        </ul>
+                    </div>
+                    <div id="tabs-body" class="tabs-body">
+                        <div style="display: block;">
+
+                            <!--上方的图-->
+                            <img src="img/1080p.png" alt="" style="width: 100% ; margin-bottom: -10px;">
 
 
+                        </div>
+                        <div style="display: none;">
+                            <img src="img/1080p.png" alt="" style="width: 100% ; margin-bottom: -10px;">
 
+
+                        </div>
+
+                        <div style="display: none;">
+
+
+                        </div>
+                    </div>
+
+
+                    <div class="swiperbody" style="margin-top: 272px">
+                        <!-- Swiper -->
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide" id="swiperItem01">
+                                    <div class="title">Dores(HQ)</div>
+                                </div>
+                                <div class="swiper-slide" id="swiperItem02">
+                                    <div class="title">SucksMan</div>
+                                </div>
+                                <div class="swiper-slide" id="swiperItem03">
+                                    <div class="title">KickmyAss</div>
+                                </div>
+                                <div class="swiper-slide" id="swiperItem04">
+                                    <div class="title">Fucker</div>
+                                </div>
+                                <div class="swiper-slide" id="swiperItem05">
+                                    <div class="title">Shit</div>
+                                </div>
+                                <div class="swiper-slide" id="swiperItem06">
+                                    <div class="title">Dores(HQ)</div>
+                                </div>
+                            </div>
+                            <!-- Add Arrows -->
+                            <div class="swiper-button-next"></div>
+
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                    </div>
 
                     <div id="middle_bar"><p>AUDIO</p></div>
 
-
-                    <div class="bottom">
-                        <div class="bottom-item">
-                            <div class="bottom_top_text">
-                                <p>BITRATE</p>
+                    <!--<div id="datemark"><a id="markyear"></a><a id="markmonth"></a><a id="markday"></a></div>-->
+                    <div id="fuck" style="width: 100% ; height: 200px; background-color: #ffffff; float: left;margin-left: -10px">
+                            <div class="swiper-container1">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="title">Dores(HQ)</div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="title">SucksMan</div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="title">KickmyAss</div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="title">Fucker</div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="title">Shit</div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="title">Dores(HQ)</div>
+                                    </div>
+                                </div>
                             </div>
 
-                            <div class="bottom_middle_text">
-                                <p>91.2</p>
+                        <div class="swiper-container2">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="title">Dores(HQ)</div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="title">SucksMan</div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="title">KickmyAss</div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="title">Fucker</div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="title">Shit</div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="title">Dores(HQ)</div>
+                                </div>
                             </div>
-                            <div class="bottom_bottom_text">
-                                <p>MB/s</p>
-                            </div>
-
-
                         </div>
 
-                        <div class="bottom-item" onclick="changeTime();">
-                            <div class="bottom_top_text">
-                                <p>TIME</p>
-                            </div>
-
-                            <div class="bottom_middle_text">
-                                <p>30</p>
-                            </div>
-                            <div class="bottom_bottom_text">
-                                <p>HOURS</p>
-                            </div>
-                        </div>
-
-                        <div class="bottom-item">
-                            <div class="bottom_top_text">
-                                <p>STORAGE SPACE</p>
-                            </div>
-
-                            <div class="bottom_middle_text">
-                                <p>420</p>
-                            </div>
-                            <div class="bottom_bottom_text">
-                                <p>GB</p>
+                        <div class="swiper-container3">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="title">Dores(HQ)</div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="title">SucksMan</div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="title">KickmyAss</div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="title">Fucker</div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="title">Shit</div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="title">Dores(HQ)</div>
+                                </div>
                             </div>
                         </div>
 
 
+                        <!--</div>-->
+                            <!--<div id="wrapper">-->
+                            <!--<div id="scroller">-->
+                            <!--<ul>-->
+                            <!--<li>Pretty row 1</li>-->
+                            <!--<li>Pretty row 2</li>-->
+                            <!--<li>Pretty row 3</li>-->
+                            <!--<li>Pretty row 4</li>-->
+                            <!--<li>Pretty row 5</li>-->
+                            <!--<li>Pretty row 7</li>-->
+                            <!--<li>Pretty row 8</li>-->
+                            <!--<li>Pretty row 9</li>-->
+                            <!--<li>Pretty row 10</li>-->
+                            <!--<li>Pretty row 11</li>-->
+                            <!--<li>Pretty row 12</li>-->
+                            <!--<li>Pretty row 13</li>-->
+                            <!--<li>Pretty row 14</li>-->
+                            <!--<li>Pretty row 15</li>-->
+                            <!--<li>Pretty row 16</li>-->
+                            <!--<li>Pretty row 17</li>-->
+                            <!--<li>Pretty row 18</li>-->
+
+                            <!--</ul>-->
+                            <!--</div>-->
+                            <!--</div>-->
+
+                            <!--<div id="wrapper02">-->
+                            <!--<div id="scroller02">-->
+                            <!--<ul>-->
+                            <!--<li>Pretty row 1</li>-->
+                            <!--<li>Pretty row 2</li>-->
+                            <!--<li>Pretty row 3</li>-->
+                            <!--<li>Pretty row 4</li>-->
+                            <!--<li>Pretty row 5</li>-->
+                            <!--<li>Pretty row 7</li>-->
+                            <!--<li>Pretty row 8</li>-->
+                            <!--<li>Pretty row 9</li>-->
+                            <!--<li>Pretty row 10</li>-->
+                            <!--<li>Pretty row 11</li>-->
+                            <!--<li>Pretty row 12</li>-->
+                            <!--<li>Pretty row 13</li>-->
+                            <!--<li>Pretty row 14</li>-->
+                            <!--<li>Pretty row 15</li>-->
+                            <!--<li>Pretty row 16</li>-->
+                            <!--<li>Pretty row 17</li>-->
+                            <!--<li>Pretty row 18</li>-->
+
+                            <!--</ul>-->
+                            <!--</div>-->
+                            <!--</div>-->
+
+
+                            <!--<div id="wrapper03">-->
+                            <!--<div id="scroller03">-->
+                            <!--<ul>-->
+                            <!--<li>Pretty row 1</li>-->
+                            <!--<li>Pretty row 2</li>-->
+                            <!--<li>Pretty row 3</li>-->
+                            <!--<li>Pretty row 4</li>-->
+                            <!--<li>Pretty row 5</li>-->
+                            <!--<li>Pretty row 7</li>-->
+                            <!--<li>Pretty row 8</li>-->
+                            <!--<li>Pretty row 9</li>-->
+                            <!--<li>Pretty row 10</li>-->
+                            <!--<li>Pretty row 11</li>-->
+                            <!--<li>Pretty row 12</li>-->
+                            <!--<li>Pretty row 13</li>-->
+                            <!--<li>Pretty row 14</li>-->
+                            <!--<li>Pretty row 15</li>-->
+                            <!--<li>Pretty row 16</li>-->
+                            <!--<li>Pretty row 17</li>-->
+                            <!--<li>Pretty row 18</li>-->
+                            <!--</ul>-->
+                            <!--</div>-->
+                        </div>
+                        <!--</div>-->
+
+                        <div class="bottom">
+                            <div class="bottom-item">
+                                <div class="bottom_top_text">
+                                    <p>BITRATE</p>
+                                </div>
+
+                                <div class="bottom_middle_text">
+                                    <p>91.2</p>
+                                </div>
+                                <div class="bottom_bottom_text">
+                                    <p>MB/s</p>
+                                </div>
+
+
+                            </div>
+
+                            <div class="bottom-item" onclick="changeTime();">
+                                <div class="bottom_top_text">
+                                    <p>TIME</p>
+                                </div>
+
+                                <div class="bottom_middle_text">
+                                    <p>30</p>
+                                </div>
+                                <div class="bottom_bottom_text">
+                                    <p>HOURS</p>
+                                </div>
+                            </div>
+
+                            <div class="bottom-item">
+                                <div class="bottom_top_text">
+                                    <p>STORAGE SPACE</p>
+                                </div>
+
+                                <div class="bottom_middle_text">
+                                    <p>420</p>
+                                </div>
+                                <div class="bottom_bottom_text">
+                                    <p>GB</p>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
-            </div>
         </div>
+            </div>
     </div>
 </div>
-
-</div>
 </body>
-
+<!--<script type="text/javascript" src="lib/iscroll.js"></script>-->
 <script type="text/javascript" src="lib/framework7.min.js"></script>
 <script type="text/javascript" src="js/app.js"></script>
-<script src="lib/jquery.1.11.3.min.js" type="text/javascript"></script>
+<script src="lib/jquery-1.10.1.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="lib/swiper-3.3.1.min.js"></script>
+<script type="text/javascript" src="js/tabs.js"></script>
+<script src="js/swiper.js" type="application/javascript"></script>
+<!--<script src="js/tabs.js" type="application/javascript"></script>-->
+<!--<script type="text/javascript">-->
+<!--var myScroll, myScroll02, myScroll03;-->
 
+<!--//    function loaded() {-->
+<!--myScroll = new IScroll('#wrapper', {mouseWheel: true, snap: "li", vScrollbar: false, click: true});-->
+<!--myScroll02 = new IScroll('#wrapper02', {mouseWheel: true, snap: "li", vScrollbar: false, click: true});-->
+<!--myScroll03 = new IScroll('#wrapper03', {mouseWheel: true, snap: "li", vScrollbar: false, click: true});-->
+<!--//    }-->
+
+<!--document.addEventListener('touchmove', function (e) {-->
+<!--e.preventDefault();-->
+<!--}, false);-->
+<!--</script>-->
+<script>
+
+    //    var swiper = new Swiper('.swiper-container', {
+    //        nextButton: '.swiper-button-next',
+    //        prevButton: '.swiper-button-prev',
+    //        slidesPerView: 3,
+    //        centeredSlides: true,
+    //        paginationClickable: true,
+    //        spaceBetween: 30,
+    //        direction : 'vertical',
+    //
+    //        onSlideChangeEnd: function(swiper){
+    //            // alert('事件触发了;');
+    //            //要怎样设置这个回调呢,没有原生的提供,那么要想别的法子了
+    //            $(".swiper-slide-active").click(function(){
+    //                alert($(this).html());
+    //            });
+    //
+    //        }
+    //    });
+
+</script>
 </html>

@@ -1,0 +1,46 @@
+.tabs {
+    float:left;
+    width:100%;
+}
+.tabs ul
+{
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+.tabs ul li
+{
+    float: left;
+    line-height: 40px;
+    margin: 0;
+    text-align: center;
+
+    /*padding: 2px 20px 0 15px;*/
+}
+.tab-nav{
+    float: left;
+    width: 33.3%;
+    height: 40px;
+    background-color: #8AD3F3;
+    cursor:pointer;
+}
+.tab-nav-action{
+    width: 33.3%;
+    height: 40px;
+    background-color: #FFE036;
+    cursor:pointer;
+}
+.tabs-body
+{
+    /*border-bottom: 1px solid #B4C9C6;*/
+    /*border-left: 1px solid #B4C9C6;*/
+    /*border-right: 1px solid #B4C9C6;*/
+    float: left;
+    /*padding: 5px 0 0;*/
+    height: auto;
+    width: 100%;
+}
+/*.tabs-body div*/
+/*{*/
+    /*padding:10px;*/
+/*}*/
