@@ -8,8 +8,6 @@ var chs = [];
 var khzs = [];
 var bits = [];
 
-
-
 function configration(video,framerate,codec,ch,khz,bit){
     this.video = video;
     this.framerate = framerate;
@@ -34,12 +32,12 @@ var globalConfig = new configration('PA','23.98','AppleProRes4444','8ch','44.1kh
 
 //干脆放在后面来
 
-
 var $$ = Framework7.$;
 
 var mainView = myApp.addView('.view-main' , {
     dynamicNavbar:true,
-    domCache:true
+    domCache:true,
+    tapHold:true,
 });
 $$('.open-right-panel').on('click', function (e) {
     // 'right' position to open Right panel
@@ -62,4 +60,9 @@ $$('.open-right-panel').on('click', function (e) {
 //
 //pickerDevice.open();
 //
+
+//长按修改时间或者空间
+//$$('.bottom-item').on('click' , function(){
+//    alert("长按!");
+//})
 
