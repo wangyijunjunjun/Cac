@@ -1,7 +1,9 @@
 /**
  * Created by nex on 4/30/16.
  */
-var myApp = new Framework7();
+var myApp = new Framework7({
+    animateNavBackIcon:true
+});
 
 var indexch,indexkhz,indexbit;
 var chs = [];
@@ -37,7 +39,7 @@ var $$ = Framework7.$;
 var mainView = myApp.addView('.view-main' , {
     dynamicNavbar:true,
     domCache:true,
-    tapHold:true,
+    tapHold:true
 });
 $$('.open-right-panel').on('click', function (e) {
     // 'right' position to open Right panel
@@ -66,3 +68,6 @@ $$('.open-right-panel').on('click', function (e) {
 //    alert("长按!");
 //})
 
+function turn2Help(){
+    mainView.router.load({pageName:'help'});
+}
