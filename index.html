@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="css/swiper.css">
     <link rel="stylesheet" href="css/tabs.css">
     <link rel="stylesheet" href="css/dottable.css">
+    <link rel="stylesheet" href="css/ul.css">
     <!--<link rel="stylesheet" href="css/myScroll.css">-->
 </head>
 <body onload="loaded()" style="width:100%;height:100%;background-color:#ffffff">
@@ -23,45 +24,85 @@
 <!-- Panels Overlay -->
 <div class="panel-overlay"></div>
 <!-- Left Panel with Reveal effect -->
-<div class="panel panel-left panel-reveal">
-    <div class="list-block">
-        <div class="list-group">
-            <ul>
-                <li class="item-content list-panel-all close-panel item-link">
-                    <div class="item-media"><i class="icon ion-ios7-paper"></i></div>
-                    <div class="item-inner">
-                        <div class="item-title">All Contacts</div>
-                    </div>
-                </li>
-                <li class="item-content list-panel-favorites close-panel item-link">
-                    <div class="item-media"><i class="icon ion-ios7-star"></i></div>
-                    <div class="item-inner">
-                        <div class="item-title">Favorites</div>
-                    </div>
-                </li>
-            </ul>
-        </div>
+<div class="panel panel-left panel-reveal" style="background-color: #8AD3F3">
+    <!--<div class="list-block">-->
+    <!--<div class="list-group">-->
+    <!--<ul>-->
+    <!--<li class="item-content list-panel-all close-panel item-link">-->
+    <!--<div class="item-media"><i class="icon ion-ios7-paper"></i></div>-->
+    <!--<div class="item-inner">-->
+    <!--<div class="item-title">All Contacts</div>-->
+    <!--</div>-->
+    <!--</li>-->
+    <!--<li class="item-content list-panel-favorites close-panel item-link">-->
+    <!--<div class="item-media"><i class="icon ion-ios7-star"></i></div>-->
+    <!--<div class="item-inner">-->
+    <!--<div class="item-title">Favorites</div>-->
+    <!--</div>-->
+    <!--</li>-->
+    <!--</ul>-->
+    <!--</div>-->
+    <!--</div>-->
+
+    <div class="title" style="height: 50px;line-height: 22px;color: #ffffff;text-align: center">
+        <h3>HELP</h3>
     </div>
+    <img src="img/help.png" alt="" style="width: auto;height: 172px;margin-left: 8px">
+    <div class="brands">
+        <ul class="brands_ul" style="list-style: none">
+            <li class="selected">SONY</li>
+            <li class="unselected">Panasonic</li>
+            <li class="unselected">Canon</li>
+            <li class="unselected">JVC</li>
+            <li class="unselected">SAMSUNG</li>
+        </ul>
+    </div>
+</div>
+
+<!--右边面板-->
+
+<div class="panel panel-right panel-reveal" style="background-color: #ffffff">
+    <div class="title" style="height: 50px;line-height: 22px;color: #ffffff;text-align: center">
+        <h3>FAVORITES</h3>
+    </div>
+
 </div>
 
 <!-- Views-->
 <div class="views">
-    <div class="view view-main navbar-fixed">
+    <!--<div class="view view-main navbar-fixed">-->
+    <div class="view view-main">
         <div class="navbar theme-white">
-            <div class="navbar-inner">
+
+            <!--HOME Navbar-->
+            <div class="navbar-inner" data-page="index">
                 <div class="left">
-                    <a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
+                    <a href="#" data-page="left" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
+                    <!--<a href="help.html" class="link">hh</a>-->
                 </div>
                 <div class="center sliding contacts-list-header">CODECALC</div>
                 <div class="right contact-add-link">
-                    <a href="#" class="link icon-only"><i class="icon icon-plus">+</i></a>
+                    <a href="#" data-page="right" class="link icon-only open-panel open-right-panel"><i class="icon icon-bars"></i></a>
                 </div>
             </div>
+
+            <!--&lt;!&ndash;HELP Navbar&ndash;&gt;-->
+
+            <!--<div class="navbar-inner cached" data-page="help">-->
+            <!--&lt;!&ndash;<div class="center">About</div>&ndash;&gt;-->
+            <!--</div>-->
+
+            <!--&lt;!&ndash;FAV Navbar&ndash;&gt;-->
+            <!--<div class="navbar-inner cached" data-page="fav">-->
+            <!--&lt;!&ndash;<div class="center">Services</div>&ndash;&gt;-->
+            <!--</div>-->
         </div>
 
 
-        <div class="pages">
-            <div data-page="top" class="page">
+        <div class="pages navbar-through">
+
+            <!--HOME PAGE-->
+            <div data-page="home" class="page">
                 <div class="page-content">
 
                     <!--三个tab-->
@@ -83,18 +124,18 @@
                             <div class="tableDotDiv" style="width: 100%;background-color: #ffffff;height: 232px;">
                                 <!--点阵-->
                                 <div class="dottable" style="padding-top: 40px">
-                                <table id="tableDot" cellpadding="2px" cellspacing="2px"
-                                       style="margin: auto auto;vertical-align: middle">
-                                    <script>
-                                        for (var i = 0; i < 8; i++) {
-                                            document.write("<tr>");
-                                            for (var j = 0; j < 15; j++) {
-                                                document.write("<td></td>");
+                                    <table id="tableDot" cellpadding="2px" cellspacing="2px"
+                                           style="margin: auto auto;vertical-align: middle">
+                                        <script>
+                                            for (var i = 0; i < 8; i++) {
+                                                document.write("<tr>");
+                                                for (var j = 0; j < 15; j++) {
+                                                    document.write("<td></td>");
+                                                }
+                                                document.write("</tr>");
                                             }
-                                            document.write("</tr>");
-                                        }
-                                    </script>
-                                </table>
+                                        </script>
+                                    </table>
                                 </div>
 
                             </div>
@@ -138,7 +179,9 @@
                         </div>
                     </div>
 
-                    <div id="middle_bar"><p>AUDIO</p></div>
+                    <a href="help.html">
+                        <div id="middle_bar"><p>AUDIO</p></div>
+                    </a>
 
                     <!--<div id="datemark"><a id="markyear"></a><a id="markmonth"></a><a id="markday"></a></div>-->
                     <div id="fuck"
@@ -323,6 +366,22 @@
                     </div>
                 </div>
             </div>
+
+
+            <!--HELP PAGE-->
+            <div data-page="help" class="page cached">
+                <div class="page-content">
+                    <p>这是帮助界面</p>
+                </div>
+            </div>
+            <!--FAVERITE PAGE-->
+            <div data-page="fav" class="page cached">
+                <div class="page-content">
+                    <p>这是嘿嘿界面</p>
+                </div>
+            </div>
+
+
         </div>
     </div>
 </div>

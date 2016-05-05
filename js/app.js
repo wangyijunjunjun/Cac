@@ -6,8 +6,18 @@ var myApp = new Framework7();
 var $$ = Framework7.$;
 
 var mainView = myApp.addView('.view-main' , {
-    dynamicNavbar:true
+    dynamicNavbar:true,
+    domCache:true
 });
+$$('.open-right-panel').on('click', function (e) {
+    // 'right' position to open Right panel
+    myApp.openPanel('right');
+});
+
+//
+//mainView.router.load({pageName:'help'});
+//
+
 //var pickerDevice = myApp.picker({
 //    input: '#picker-device',
 //    cols: [
