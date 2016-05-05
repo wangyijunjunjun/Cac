@@ -3,6 +3,13 @@
  */
 var myApp = new Framework7();
 
+var indexch,indexkhz,indexbit;
+var chs = [];
+var khzs = [];
+var bits = [];
+
+
+
 function configration(video,framerate,codec,ch,khz,bit){
     this.video = video;
     this.framerate = framerate;

@@ -1,16 +1,8 @@
 /**
  * Created by nex on 5/1/16.
  */
-$(document).ready(function () {
+//$(document).ready(function () {
 
-    //处理左视图ul的点击事件.用到的接口是mySwiper.slideTO();
-    $("#brands_ul li").bind("click", function () {
-        var index = $(this).index();
-
-        $(this).parent().children("li").attr("class", "unselected");//将所有选项置为未选中
-        $(this).attr("class", "selected"); //设置当前选中项为选中样式
-//
-    });
 
 
     $("#tabs li").bind("click", function () {
@@ -67,4 +59,4 @@ $(document).ready(function () {
 
 
     });
-});
+//});

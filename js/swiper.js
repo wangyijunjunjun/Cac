@@ -103,3 +103,30 @@ function animation(text){
             break;
     }
 }
+
+
+
+function changeSwipers(){
+    //先拿到globalConfig对象的属性及index
+    indexch = getIndex(chs , globalConfig.ch);
+    indexkhz = getIndex(khzs , globalConfig.khz);
+    indexbit = getIndex(bits , globalConfig.bit);
+
+
+    swiper2.slideTo(1,1000,false);
+    swiper3.slideTo(0,1000,false);
+    swiper4.slideTo(0,1000,false);
+}
+
+//通过遍李数组,获取指定元素的索引值
+function getIndex(array , str){
+    var index= 0;
+    for (var i = 0 ; i <array.length ; i++){
+        if(array[i] == str){
+            index = i;
+            return;
+        }
+    }
+
+    return index;
+}
