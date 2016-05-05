@@ -3,6 +3,31 @@
  */
 var myApp = new Framework7();
 
+function configration(video,framerate,codec,ch,khz,bit){
+    this.video = video;
+    this.framerate = framerate;
+    this.codec = codec;
+    this.ch = ch;
+    this.khz = khz;
+    this.bit = bit;
+}
+
+//定义一个全局的configration对象
+var globalConfig = new configration('PA','23.98','AppleProRes4444','8ch','44.1khz','16bit');
+
+//现在要思考一下怎么改变初始化的时候的swiper状态
+//只需添加参数initialSlide:1即可
+//想到一个问题:可不可以动态添加swiper的slide,这样可扩展性就打打提高
+
+//伪代码:
+//function onloaded(){
+//    func:添加swiper的数据
+//    func:渲染swiper
+//}
+
+//干脆放在后面来
+
+
 var $$ = Framework7.$;
 
 var mainView = myApp.addView('.view-main' , {
@@ -30,3 +55,4 @@ $$('.open-right-panel').on('click', function (e) {
 //
 //pickerDevice.open();
 //
+

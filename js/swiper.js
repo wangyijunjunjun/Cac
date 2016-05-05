@@ -10,6 +10,7 @@ var swiper = new Swiper('.swiper-container', {
     slidesPerView: 3,
     centeredSlides: true,
     paginationClickable: true,
+    initialSlide:1,
     spaceBetween: 20,
     observer:true,
     direction:'horizontal',
@@ -26,12 +27,14 @@ animation(animationText);
     }
 });
 
+//初始化的时候,没有执行回调onSlideChangeEnd,所有在给globalConfig初始化的时候,就要覆上应有的初始值
 var swiper2 = new Swiper('.swiper-container1', {
     slidesPerView: 4,
     direction : 'vertical',
     centeredSlides: true,
     paginationClickable: true,
     spaceBetween: 30,
+    initialSlide:1,
     observer:true,
     autoHeight: true,
 
@@ -40,7 +43,7 @@ var swiper2 = new Swiper('.swiper-container1', {
         // alert('事件触发了;');
         //要怎样设置这个回调呢,没有原生的提供,那么要想别的法子了
         $(".swiper-slide-active").click(function () {
-            alert($(this).html());
+            globalConfig.ch = $(this).children('div.title').html().toString();
         });
     }
 });
@@ -52,6 +55,7 @@ var swiper3 = new Swiper('.swiper-container2', {
     paginationClickable: true,
     spaceBetween: 30,
     observer:true,
+    initialSlide:1,
     autoHeight: true,
 
 
@@ -59,7 +63,8 @@ var swiper3 = new Swiper('.swiper-container2', {
         // alert('事件触发了;');
         //要怎样设置这个回调呢,没有原生的提供,那么要想别的法子了
         $(".swiper-slide-active").click(function () {
-            alert($(this).children('div.title').html());
+            //alert($(this).children('div.title').html());
+            globalConfig.khz  = $(this).children('div.title').html().toString();
         });
     }
 });
@@ -70,6 +75,7 @@ var swiper4 = new Swiper('.swiper-container3', {
     centeredSlides: true,
     paginationClickable: true,
     spaceBetween: 30,
+    initialSlide:1,
     observer:true,
     autoHeight: true,
 
@@ -78,7 +84,9 @@ var swiper4 = new Swiper('.swiper-container3', {
         // alert('事件触发了;');
         //要怎样设置这个回调呢,没有原生的提供,那么要想别的法子了
         $(".swiper-slide-active").click(function () {
-            alert($(this).html());
+            //alert($(this).children('div.title').html().toString());
+            globalConfig.bit = $(this).children('div.title').html().toString();
+            alert(globalConfig.bit)
         });
     }
 });
