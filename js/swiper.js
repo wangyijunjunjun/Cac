@@ -1,6 +1,9 @@
 /**
  * Created by nex on 5/1/16.
  */
+
+var animationText;
+
 var swiper = new Swiper('.swiper-container', {
     nextButton: '.swiper-button-next',
     prevButton: '.swiper-button-prev',
@@ -15,7 +18,10 @@ var swiper = new Swiper('.swiper-container', {
         // alert('事件触发了;');
         //要怎样设置这个回调呢,没有原生的提供,那么要想别的法子了
         $(".swiper-slide-active").click(function () {
-            alert($(this).html());
+            //alert($(this).children('div.title').html());
+            animationText = $(this).children('div.title').html().toString();
+            alert(animationText);
+animation(animationText);
         });
     }
 });
@@ -53,7 +59,7 @@ var swiper3 = new Swiper('.swiper-container2', {
         // alert('事件触发了;');
         //要怎样设置这个回调呢,没有原生的提供,那么要想别的法子了
         $(".swiper-slide-active").click(function () {
-            alert($(this).html());
+            alert($(this).children('div.title').html());
         });
     }
 });
@@ -76,3 +82,16 @@ var swiper4 = new Swiper('.swiper-container3', {
         });
     }
 });
+
+
+//动画函数 四个swiper 数十个text
+function animation(text){
+    switch (text){
+        case "SucksMan":
+            alert(animationText);
+            break;
+        case "22.9":
+            alert(animationText);
+            break;
+    }
+}

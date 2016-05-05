@@ -1,0 +1,57 @@
+
+.in {
+    border: 2px solid #8AD3F3;
+}
+
+td {
+    -webkit-border-radius: 6px;
+    border: 2px solid #eaeaea;
+    width: 6px;
+    height: 6px;
+}
+
+/*.select_area {*/
+    /*overflow: hidden;*/
+    /*height: 120px;*/
+    /*margin: auto 30px;*/
+    /*padding: 0 7px;*/
+    /*border-radius: 2px;*/
+    /*background-color: #ffffff;*/
+/*}*/
+
+/*.title {*/
+    /*text-align: center;*/
+    /*font-size: 20px;*/
+    /*font-weight: bold;*/
+    /*color: #fff;*/
+    /*font-style: italic;*/
+/*}*/
+
+/*ul {*/
+    /*margin: 0;*/
+    /*padding: 0;*/
+    /*list-style: none;*/
+    /*margin-top: -1px;*/
+/*}*/
+
+/*li {*/
+    /*position: relative;*/
+    /*height: 40px;*/
+    /*line-height: 40px;*/
+    /*font-size: 16px;*/
+    /*color: gray;*/
+    /*text-align: center;*/
+/*}*/
+
+/*li:after {*/
+    /*content: '';*/
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*width: 100%;*/
+/*}*/
+
+/*.selected {*/
+    /*color: black;*/
+    /*font-weight: bold;*/
+/*}*/

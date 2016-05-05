@@ -25,31 +25,30 @@ $(document).ready(function () {
         }
 
         function turn00() {
-
-            $("#swiperItem01").children().html("<div class='title'>ddd</div>");
-            $("#swiperItem02").children().html("<div class='title'>aaa</div>");
-            $("#swiperItem03").children().html("<div class='title'>wee</div>");
-            $("#swiperItem04").children().html("<div class='title'>gdf</div>");
-            $("#swiperItem05").children().html("<div class='title'>ghg</div>");
-
+            $("#swiperItem01").children().html("<div class='title'>NTSC</div>");
+            $("#swiperItem02").children().html("<div class='title'>PA</div>");
+            $("#swiperItem03").children().html("<div class='title'>HD720</div>");
+            $("#swiperItem04").children().html("<div class='title'>HD1080</div>");
+            $("#swiperItem05").children().html("<div class='title'>2K1080</div>");
+            $("#swiperItem06").children().html("<div class='title'>2K1556</div>");
         }
 
 
         function turn01() {
 
-            $("#swiperItem01").children().html("<div class='title'>HHHHHH</div>");
-            $("#swiperItem02").children().html("<div class='title'>JJJJJJ</div>");
-            $("#swiperItem03").children().html("<div class='title'>UUUUUU</div>");
-            $("#swiperItem04").children().html("<div class='title'>AAAAAA</div>");
-            $("#swiperItem05").children().html("<div class='title'>RRRRRR</div>");
+            $("#swiperItem01").children().html("<div class='title'>22.9</div>");
+            $("#swiperItem02").children().html("<div class='title'>23.98</div>");
+            $("#swiperItem03").children().html("<div class='title'>24</div>");
+            $("#swiperItem04").children().html("<div class='title'>25</div>");
+            $("#swiperItem05").children().html("<div class='title'>26.1</div>");
 
         }
 
         function turn02() {
 
-            $("#swiperItem01").children().html("<div class='title'>QQ</div>");
-            $("#swiperItem02").children().html("<div class='title'>QQ</div>");
-            $("#swiperItem03").children().html("<div class='title'>TT</div>");
+            $("#swiperItem01").children().html("<div class='title'>(HQ)</div>");
+            $("#swiperItem02").children().html("<div class='title'>AppleProRes4444</div>");
+            $("#swiperItem03").children().html("<div class='title'>AVC</div>");
             $("#swiperItem04").children().html("<div class='title'>WW</div>");
             $("#swiperItem05").children().html("<div class='title'>RGG</div>");
 

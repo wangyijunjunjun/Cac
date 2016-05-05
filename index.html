@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/swiper.css">
     <link rel="stylesheet" href="css/tabs.css">
+    <link rel="stylesheet" href="css/dottable.css">
     <!--<link rel="stylesheet" href="css/myScroll.css">-->
 </head>
 <body onload="loaded()" style="width:100%;height:100%;background-color:#ffffff">
@@ -76,12 +77,27 @@
 
                             <!--上方的图-->
                             <img src="img/1080p.png" alt="" style="width: 100% ; margin-bottom: -10px;">
-
-
                         </div>
-                        <div style="display: none;">
-                            <img src="img/1080p.png" alt="" style="width: 100% ; margin-bottom: -10px;">
+                        <div style="display: none;position: fixed;width: 100%">
 
+                            <div class="tableDotDiv" style="width: 100%;background-color: #ffffff;height: 232px;">
+                                <!--点阵-->
+                                <div class="dottable" style="padding-top: 40px">
+                                <table id="tableDot" cellpadding="2px" cellspacing="2px"
+                                       style="margin: auto auto;vertical-align: middle">
+                                    <script>
+                                        for (var i = 0; i < 8; i++) {
+                                            document.write("<tr>");
+                                            for (var j = 0; j < 15; j++) {
+                                                document.write("<td></td>");
+                                            }
+                                            document.write("</tr>");
+                                        }
+                                    </script>
+                                </table>
+                                </div>
+
+                            </div>
 
                         </div>
 
@@ -125,200 +141,189 @@
                     <div id="middle_bar"><p>AUDIO</p></div>
 
                     <!--<div id="datemark"><a id="markyear"></a><a id="markmonth"></a><a id="markday"></a></div>-->
-                    <div id="fuck" style="width: 100% ; height: 200px; background-color: #ffffff; float: left;margin-left: -10px">
-                            <div class="swiper-container1">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <div class="title">Dores(HQ)</div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="title">SucksMan</div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="title">KickmyAss</div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="title">Fucker</div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="title">Shit</div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="title">Dores(HQ)</div>
-                                    </div>
+                    <div id="fuck"
+                         style="width: 100% ; height: 40%; background-color: #ffffff; float: left;margin-left: -10px">
+                        <div class="swiper-container1">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="title">4ch</div>
                                 </div>
+                                <div class="swiper-slide">
+                                    <div class="title">8ch</div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="title">12ch</div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="title">16ch</div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="title">20ch</div>
+                                </div>
+
                             </div>
+                        </div>
 
                         <div class="swiper-container2">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                    <div class="title">Dores(HQ)</div>
+                                    <div class="title">32.0khz</div>
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="title">SucksMan</div>
+                                    <div class="title">44.1khz</div>
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="title">KickmyAss</div>
+                                    <div class="title">48.0khz</div>
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="title">Fucker</div>
+                                    <div class="title">55khz</div>
                                 </div>
-                                <div class="swiper-slide">
-                                    <div class="title">Shit</div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="title">Dores(HQ)</div>
-                                </div>
+
                             </div>
                         </div>
 
                         <div class="swiper-container3">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                    <div class="title">Dores(HQ)</div>
+                                    <div class="title">8bit</div>
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="title">SucksMan</div>
+                                    <div class="title">16bit</div>
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="title">KickmyAss</div>
+                                    <div class="title">20bit</div>
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="title">Fucker</div>
+                                    <div class="title">24bit</div>
                                 </div>
-                                <div class="swiper-slide">
-                                    <div class="title">Shit</div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="title">Dores(HQ)</div>
-                                </div>
+
                             </div>
                         </div>
 
 
                         <!--</div>-->
-                            <!--<div id="wrapper">-->
-                            <!--<div id="scroller">-->
-                            <!--<ul>-->
-                            <!--<li>Pretty row 1</li>-->
-                            <!--<li>Pretty row 2</li>-->
-                            <!--<li>Pretty row 3</li>-->
-                            <!--<li>Pretty row 4</li>-->
-                            <!--<li>Pretty row 5</li>-->
-                            <!--<li>Pretty row 7</li>-->
-                            <!--<li>Pretty row 8</li>-->
-                            <!--<li>Pretty row 9</li>-->
-                            <!--<li>Pretty row 10</li>-->
-                            <!--<li>Pretty row 11</li>-->
-                            <!--<li>Pretty row 12</li>-->
-                            <!--<li>Pretty row 13</li>-->
-                            <!--<li>Pretty row 14</li>-->
-                            <!--<li>Pretty row 15</li>-->
-                            <!--<li>Pretty row 16</li>-->
-                            <!--<li>Pretty row 17</li>-->
-                            <!--<li>Pretty row 18</li>-->
+                        <!--<div id="wrapper">-->
+                        <!--<div id="scroller">-->
+                        <!--<ul>-->
+                        <!--<li>Pretty row 1</li>-->
+                        <!--<li>Pretty row 2</li>-->
+                        <!--<li>Pretty row 3</li>-->
+                        <!--<li>Pretty row 4</li>-->
+                        <!--<li>Pretty row 5</li>-->
+                        <!--<li>Pretty row 7</li>-->
+                        <!--<li>Pretty row 8</li>-->
+                        <!--<li>Pretty row 9</li>-->
+                        <!--<li>Pretty row 10</li>-->
+                        <!--<li>Pretty row 11</li>-->
+                        <!--<li>Pretty row 12</li>-->
+                        <!--<li>Pretty row 13</li>-->
+                        <!--<li>Pretty row 14</li>-->
+                        <!--<li>Pretty row 15</li>-->
+                        <!--<li>Pretty row 16</li>-->
+                        <!--<li>Pretty row 17</li>-->
+                        <!--<li>Pretty row 18</li>-->
 
-                            <!--</ul>-->
-                            <!--</div>-->
-                            <!--</div>-->
-
-                            <!--<div id="wrapper02">-->
-                            <!--<div id="scroller02">-->
-                            <!--<ul>-->
-                            <!--<li>Pretty row 1</li>-->
-                            <!--<li>Pretty row 2</li>-->
-                            <!--<li>Pretty row 3</li>-->
-                            <!--<li>Pretty row 4</li>-->
-                            <!--<li>Pretty row 5</li>-->
-                            <!--<li>Pretty row 7</li>-->
-                            <!--<li>Pretty row 8</li>-->
-                            <!--<li>Pretty row 9</li>-->
-                            <!--<li>Pretty row 10</li>-->
-                            <!--<li>Pretty row 11</li>-->
-                            <!--<li>Pretty row 12</li>-->
-                            <!--<li>Pretty row 13</li>-->
-                            <!--<li>Pretty row 14</li>-->
-                            <!--<li>Pretty row 15</li>-->
-                            <!--<li>Pretty row 16</li>-->
-                            <!--<li>Pretty row 17</li>-->
-                            <!--<li>Pretty row 18</li>-->
-
-                            <!--</ul>-->
-                            <!--</div>-->
-                            <!--</div>-->
-
-
-                            <!--<div id="wrapper03">-->
-                            <!--<div id="scroller03">-->
-                            <!--<ul>-->
-                            <!--<li>Pretty row 1</li>-->
-                            <!--<li>Pretty row 2</li>-->
-                            <!--<li>Pretty row 3</li>-->
-                            <!--<li>Pretty row 4</li>-->
-                            <!--<li>Pretty row 5</li>-->
-                            <!--<li>Pretty row 7</li>-->
-                            <!--<li>Pretty row 8</li>-->
-                            <!--<li>Pretty row 9</li>-->
-                            <!--<li>Pretty row 10</li>-->
-                            <!--<li>Pretty row 11</li>-->
-                            <!--<li>Pretty row 12</li>-->
-                            <!--<li>Pretty row 13</li>-->
-                            <!--<li>Pretty row 14</li>-->
-                            <!--<li>Pretty row 15</li>-->
-                            <!--<li>Pretty row 16</li>-->
-                            <!--<li>Pretty row 17</li>-->
-                            <!--<li>Pretty row 18</li>-->
-                            <!--</ul>-->
-                            <!--</div>-->
-                        </div>
+                        <!--</ul>-->
+                        <!--</div>-->
                         <!--</div>-->
 
-                        <div class="bottom">
-                            <div class="bottom-item">
-                                <div class="bottom_top_text">
-                                    <p>BITRATE</p>
-                                </div>
+                        <!--<div id="wrapper02">-->
+                        <!--<div id="scroller02">-->
+                        <!--<ul>-->
+                        <!--<li>Pretty row 1</li>-->
+                        <!--<li>Pretty row 2</li>-->
+                        <!--<li>Pretty row 3</li>-->
+                        <!--<li>Pretty row 4</li>-->
+                        <!--<li>Pretty row 5</li>-->
+                        <!--<li>Pretty row 7</li>-->
+                        <!--<li>Pretty row 8</li>-->
+                        <!--<li>Pretty row 9</li>-->
+                        <!--<li>Pretty row 10</li>-->
+                        <!--<li>Pretty row 11</li>-->
+                        <!--<li>Pretty row 12</li>-->
+                        <!--<li>Pretty row 13</li>-->
+                        <!--<li>Pretty row 14</li>-->
+                        <!--<li>Pretty row 15</li>-->
+                        <!--<li>Pretty row 16</li>-->
+                        <!--<li>Pretty row 17</li>-->
+                        <!--<li>Pretty row 18</li>-->
 
-                                <div class="bottom_middle_text">
-                                    <p>91.2</p>
-                                </div>
-                                <div class="bottom_bottom_text">
-                                    <p>MB/s</p>
-                                </div>
+                        <!--</ul>-->
+                        <!--</div>-->
+                        <!--</div>-->
 
 
-                            </div>
-
-                            <div class="bottom-item" onclick="changeTime();">
-                                <div class="bottom_top_text">
-                                    <p>TIME</p>
-                                </div>
-
-                                <div class="bottom_middle_text">
-                                    <p>30</p>
-                                </div>
-                                <div class="bottom_bottom_text">
-                                    <p>HOURS</p>
-                                </div>
-                            </div>
-
-                            <div class="bottom-item">
-                                <div class="bottom_top_text">
-                                    <p>STORAGE SPACE</p>
-                                </div>
-
-                                <div class="bottom_middle_text">
-                                    <p>420</p>
-                                </div>
-                                <div class="bottom_bottom_text">
-                                    <p>GB</p>
-                                </div>
-                            </div>
-
-                        </div>
+                        <!--<div id="wrapper03">-->
+                        <!--<div id="scroller03">-->
+                        <!--<ul>-->
+                        <!--<li>Pretty row 1</li>-->
+                        <!--<li>Pretty row 2</li>-->
+                        <!--<li>Pretty row 3</li>-->
+                        <!--<li>Pretty row 4</li>-->
+                        <!--<li>Pretty row 5</li>-->
+                        <!--<li>Pretty row 7</li>-->
+                        <!--<li>Pretty row 8</li>-->
+                        <!--<li>Pretty row 9</li>-->
+                        <!--<li>Pretty row 10</li>-->
+                        <!--<li>Pretty row 11</li>-->
+                        <!--<li>Pretty row 12</li>-->
+                        <!--<li>Pretty row 13</li>-->
+                        <!--<li>Pretty row 14</li>-->
+                        <!--<li>Pretty row 15</li>-->
+                        <!--<li>Pretty row 16</li>-->
+                        <!--<li>Pretty row 17</li>-->
+                        <!--<li>Pretty row 18</li>-->
+                        <!--</ul>-->
+                        <!--</div>-->
                     </div>
-        </div>
+                    <!--</div>-->
+
+                    <div class="bottom">
+                        <div class="bottom-item">
+                            <div class="bottom_top_text">
+                                <p>BITRATE</p>
+                            </div>
+
+                            <div class="bottom_middle_text">
+                                <p>91.2</p>
+                            </div>
+                            <div class="bottom_bottom_text">
+                                <p>MB/s</p>
+                            </div>
+
+
+                        </div>
+
+                        <div class="bottom-item" onclick="changeTime();">
+                            <div class="bottom_top_text">
+                                <p>TIME</p>
+                            </div>
+
+                            <div class="bottom_middle_text">
+                                <p>30</p>
+                            </div>
+                            <div class="bottom_bottom_text">
+                                <p>HOURS</p>
+                            </div>
+                        </div>
+
+                        <div class="bottom-item">
+                            <div class="bottom_top_text">
+                                <p>STORAGE SPACE</p>
+                            </div>
+
+                            <div class="bottom_middle_text">
+                                <p>420</p>
+                            </div>
+                            <div class="bottom_bottom_text">
+                                <p>GB</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
             </div>
+        </div>
     </div>
 </div>
 </body>
@@ -362,7 +367,31 @@
     //            });
     //
     //        }
-    //    });
 
+    window.onload = function () {
+        renderDotTable("A");
+
+    }
+
+    //    点阵
+    var chars = {};
+    chars.A = [[1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]];
+    chars.B = [[1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]];
+    chars.C = [[1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]];
+    chars.D = [[1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]];
+    chars.F = [[1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]];
+
+
+    function renderDotTable(index) {
+        var charHex = chars[index];
+        $(".in").removeClass("in");
+        $("#tableDot tr").each(function (i) {
+            $(this).find("td").each(function (j) {
+                if (charHex[i][j] == 1) {
+                    $(this).addClass("in");
+                }
+            })
+        })
+    }
 </script>
 </html>
