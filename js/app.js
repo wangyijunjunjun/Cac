@@ -3,8 +3,8 @@
  */
 var myApp = new Framework7({
     animateNavBackIcon: true,
-    template7Pages : true,
-    precompileTemplates:true
+    template7Pages: true,
+    precompileTemplates: true
 });
 
 var indexch, indexkhz, indexbit;
@@ -105,25 +105,100 @@ function addFav() {
 
     var el = document.createElement("li");
     el.class = "swipeout";
-    el.style = "background-color: #88D7F4";
+    el.style = "background-color: #88D7F4;padding-bottom: 16px";
 
-    el.innerHTML = "<div class='swipeout-content item-content' style='background-color: #88D7F4'>"
-        + "<div class='card' style='margin:0 auto;background-color: #88D7F4'>"
-        + "<div style='width: 50px;height:180px;border-radius:8px 0 0 8px ;background-color:#425665;float:left'></div>"
-        + "<div style='width: 290px;height:180px;border-radius: 0 8px 8px 0;background-color:#ffffff;float:left'></div>"
-        + "</div>"
-        + "</div>"
+    //el.innerHTML = "<div class='swipeout-content item-content' style='background-color: #88D7F4'>"
+    //    + "<div class='card' style='margin:0 auto;background-color: #88D7F4'>"
+    //    + "<div style='width: 50px;height:180px;border-radius:8px 0 0 8px ;background-color:#425665;float:left'></div>"
+    //    + "<div style='width: 290px;height:180px;border-radius: 0 8px 8px 0;background-color:#ffffff;float:left'></div>"
+    //    + "</div>"
+    //    + "</div>"
+    //    + "<div class='swipeout-actions-right'>"
+    //    + "<a href=''#' class='swipeout-delete' style='background-color: #FFE036'>Action 1</a>"
+    //    + "</div>";
+
+    el.innerHTML = "<div class='swipeout-content item-content' style='background-color: #88D7F4;margin-left: -12px;'>"
+        + "<div class='card' style='margin: 0 auto;background-color: #88D7F4'>"
+        + "<div style='width: 50px;height: 180px;border-radius:8px 0 0 8px ;background-color: #425665;float: left'></div>"
+        + "<div style='width: 290px;height: 180px;border-radius: 0 8px 8px 0;background-color: #ffffff;float: left'>"
+        + "<h3 style='margin: 12px 0 -10px 16px;font-size: 22px'>CUSTOM 1</h3>"
+        + "<div class='sixConfig' style='margin: 24px 0 0 16px;'>"
+        + "<div class='distract01'>"
+        + "<img src='img/card01.png' alt='' style='width: 40px;height: 32px;'>"
+        + "<h4 style='margin: -30px 0 0px 51px;font-style: normal'>hhhhh</h4></div>"
+        + "<div class='distract02'>"
+        + "<img src='img/card04.png' alt='' style='width: 40px;margin-top: 5px;height: 32px;'>"
+        + "<h4 style='margin: -30px 0 0 51px;font-style: normal'>hhhhh</h4></div>"
+        + "<div class='distract01'>"
+        + "<img src='img/card02.png' alt='' style='width: 40px;height: 32px;'>"
+        + "<h4 style='margin: -30px 0 0 51px;font-style: normal'>hhhhh</h4></div>"
+        + "<div class='distract02'>"
+        + "<h4 style='margin: 46px 0 0 51px;font-style: normal'>hhhhh</h4></div>"
+        + "<div class='distract01'>"
+        + "<img src='img/card03.png' alt='' style='width: 40px;height: 32px;'>"
+        + "<h4 style='margin: -30px 0 0 51px;font-style: normal'>hhhhh</h4></div>"
+        + "<div class='distract02'>"
+        + "<h4 style='margin: -27px 0 0 51px;font-style: normal'>hhhhh</h4></div>"
+        + "</div></div></div></div>"
         + "<div class='swipeout-actions-right'>"
-        + "<a href=''#' class='swipeout-delete' style='background-color: #FFE036'>Action 1</a>"
+        + "<a href='#' class='swipeout-delete' style='background-color: #FFE036'>Action 1</a>"
         + "</div>";
 
 
     var body = document.getElementById("cards_ul");
+
     body.appendChild(el);
 
+
+//<li class="swipeout" style="background-color: #88D7F4">
+//        <div class="swipeout-content item-content" style="background-color: #88D7F4">
+//        <div class="card" style="margin: 0 auto;background-color: #88D7F4">
+//        <div style="width: 50px;height: 180px;border-radius:8px 0 0 8px ;background-color: #425665;float: left"></div>
+//        <div style="width: 290px;height: 180px;border-radius: 0 8px 8px 0;background-color: #ffffff;float: left">
+//        <h3 style="margin: 12px 0 -10px 16px;font-size: 22px">CUSTOM 1</h3>
+//
+//    <div class="sixConfig" style="margin: 31px 0 0 16px;">
+//        <div class="distract01">
+//        <img src="img/card01.png" alt="" style="width: 40px;height: 32px;">
+//        <h4 style="margin: -30px 0 0px 51px;font-style: normal">hhhhh</h4>
+//        </div>
+//
+//        <div class="distract02">
+//        <img src="img/card04.png" alt=""
+//    style="width: 40px;margin-top: 5px;height: 32px;">
+//        <h4 style="margin: -30px 0 0 51px;font-style: normal">hhhhh</h4>
+//        </div>
+//
+//        <div class="distract01">
+//        <img src="img/card02.png" alt="" style="width: 40px;height: 32px;">
+//        <h4 style="margin: -30px 0 0 51px;font-style: normal">hhhhh</h4>
+//        </div>
+//
+//        <div class="distract02">
+//        <h4 style="margin: 46px 0 0 51px;font-style: normal">hhhhh</h4>
+//        </div>
+//
+//        <div class="distract01">
+//        <img src="img/card03.png" alt="" style="width: 40px;height: 32px;">
+//
+//        <h4 style="margin: -30px 0 0 51px;font-style: normal">hhhhh</h4>
+//        </div>
+//
+//        <div class="distract02">
+//
+//        <h4 style="margin: -27px 0 0 51px;font-style: normal">hhhhh</h4>
+//        </div>
+//        </div>
+//        </div>
+//        </div>
+//        </div>
+//        <div class="swipeout-actions-right">
+//        <a href="#" class="swipeout-delete" style="background-color: #FFE036">Action 1</a>
+//    </div>
+//    </li>
+
+
 //ok , 尝试了N次之后,终于成功了一次
-
-
 
 
     //$("#cards_ul").append(el);
@@ -146,9 +221,6 @@ function addFav() {
     //    + "<div class='swipeout-actions-right'>"
     //    + "<a href=''#' class='swipeout-delete' style='background-color: #FFE036'>Action 1</a>"
     //    + "</div></li>");
-
-
-
 
 
 }
