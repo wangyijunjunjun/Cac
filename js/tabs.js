@@ -21,9 +21,11 @@
                 break;
             case 1:
                 turn01();
+                swiper6.onResize();
                 break;
             case 2:
                 turn02();
+                swiper5.onResize();
                 break;
         }
 
