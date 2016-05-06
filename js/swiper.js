@@ -49,6 +49,8 @@ var swiper6 = new Swiper('.swiper-container5', {
 });
 
 var swiper5 = new Swiper('.swiper-container4', {
+    nextButton: '.swiper-button-next',
+    prevButton: '.swiper-button-prev',
     slidesPerView: 3,
     centeredSlides: true,
     initialSlide: 1,

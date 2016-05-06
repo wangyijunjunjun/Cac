@@ -12,7 +12,24 @@
     text-align: center;
 }
 
+.swiper-container4  {
+    width: auto;
+    height: auto;
+    color: #000;
+    background: #fff;
+    text-align: center;
+}
+
+.swiper-container5 {
+    width: auto;
+    height: auto;
+    color: #000;
+    background: #fff;
+    text-align: center;
+}
+
 .swiper-container1 {
+    margin: 23px 0px;
     width: 33.3%;
     /*margin-left: -10px;*/
     height: 180px;
@@ -22,6 +39,7 @@
 }
 
 .swiper-container2 {
+    margin: 23px 0px;
     /*margin-left: -10px;*/
     width: 33.3%;
     height: 180px;
@@ -31,6 +49,7 @@
 }
 
 .swiper-container3 {
+    margin: 23px 0px;
     /*margin-left: -10px;*/
     width: 33.3%;
     height: 180px;
