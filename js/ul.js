@@ -9,13 +9,26 @@ $("#brands_ul li").bind("click", function () {
     $(this).attr("class", "selected"); //设置当前选中项为选中样式
 
     //关闭left panel
-    myApp.closePanel();
+    //myApp.closePanel();
 
+    //switch (index){
+    //    case 0:
+    //        //调用4次slideTo(写一个方法,changeSliders(),根据globalConfig来更改这4个slider)
+    //        changeSwipers();
+    //        break;
+    //
+    //}
+
+    //跳转到型号ul
     switch (index){
         case 0:
-            //调用4次slideTo(写一个方法,changeSliders(),根据globalConfig来更改这4个slider)
-            changeSwipers();
+            turn2Sony();
             break;
-
     }
+
+
 });
+
+function turn2Sony(){
+    mainView.router.load({pageName:'fav'});
+}

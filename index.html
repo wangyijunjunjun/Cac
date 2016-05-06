@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/tabs.css">
     <link rel="stylesheet" href="css/dottable.css">
     <link rel="stylesheet" href="css/ul.css">
+    <link rel="stylesheet" href="css/input.css">
     <!--<link rel="stylesheet" href="css/myScroll.css">-->
 </head>
 <body onload="loaded()" style="width:100%;height:100%;background-color:#ffffff">
@@ -26,46 +27,46 @@
 <div class="panel-overlay"></div>
 <!-- Left Panel with Reveal effect -->
 <!--<div class="panel panel-left panel-reveal" style="background-color: #8AD3F3">-->
-    <!--&lt;!&ndash;<div class="list-block">&ndash;&gt;-->
-    <!--&lt;!&ndash;<div class="list-group">&ndash;&gt;-->
-    <!--&lt;!&ndash;<ul>&ndash;&gt;-->
-    <!--&lt;!&ndash;<li class="item-content list-panel-all close-panel item-link">&ndash;&gt;-->
-    <!--&lt;!&ndash;<div class="item-media"><i class="icon ion-ios7-paper"></i></div>&ndash;&gt;-->
-    <!--&lt;!&ndash;<div class="item-inner">&ndash;&gt;-->
-    <!--&lt;!&ndash;<div class="item-title">All Contacts</div>&ndash;&gt;-->
-    <!--&lt;!&ndash;</div>&ndash;&gt;-->
-    <!--&lt;!&ndash;</li>&ndash;&gt;-->
-    <!--&lt;!&ndash;<li class="item-content list-panel-favorites close-panel item-link">&ndash;&gt;-->
-    <!--&lt;!&ndash;<div class="item-media"><i class="icon ion-ios7-star"></i></div>&ndash;&gt;-->
-    <!--&lt;!&ndash;<div class="item-inner">&ndash;&gt;-->
-    <!--&lt;!&ndash;<div class="item-title">Favorites</div>&ndash;&gt;-->
-    <!--&lt;!&ndash;</div>&ndash;&gt;-->
-    <!--&lt;!&ndash;</li>&ndash;&gt;-->
-    <!--&lt;!&ndash;</ul>&ndash;&gt;-->
-    <!--&lt;!&ndash;</div>&ndash;&gt;-->
-    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--&lt;!&ndash;<div class="list-block">&ndash;&gt;-->
+<!--&lt;!&ndash;<div class="list-group">&ndash;&gt;-->
+<!--&lt;!&ndash;<ul>&ndash;&gt;-->
+<!--&lt;!&ndash;<li class="item-content list-panel-all close-panel item-link">&ndash;&gt;-->
+<!--&lt;!&ndash;<div class="item-media"><i class="icon ion-ios7-paper"></i></div>&ndash;&gt;-->
+<!--&lt;!&ndash;<div class="item-inner">&ndash;&gt;-->
+<!--&lt;!&ndash;<div class="item-title">All Contacts</div>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--&lt;!&ndash;</li>&ndash;&gt;-->
+<!--&lt;!&ndash;<li class="item-content list-panel-favorites close-panel item-link">&ndash;&gt;-->
+<!--&lt;!&ndash;<div class="item-media"><i class="icon ion-ios7-star"></i></div>&ndash;&gt;-->
+<!--&lt;!&ndash;<div class="item-inner">&ndash;&gt;-->
+<!--&lt;!&ndash;<div class="item-title">Favorites</div>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--&lt;!&ndash;</li>&ndash;&gt;-->
+<!--&lt;!&ndash;</ul>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
 
-    <!--<div class="title" style="height: 50px;line-height: 22px;color: #ffffff;text-align: center">-->
-        <!--<h3>HELP</h3>-->
-    <!--</div>-->
-    <!--<img src="img/help.png" alt="" style="width: auto;height: 172px;margin-left: 8px">-->
-    <!--<div class="brands">-->
-        <!--<ul class="brands_ul" id="brands_ul" style="list-style: none">-->
-            <!--<li class="selected">SONY</li>-->
-            <!--<li class="unselected">Panasonic</li>-->
-            <!--<li class="unselected">Canon</li>-->
-            <!--<li class="unselected">JVC</li>-->
-            <!--<li class="unselected">SAMSUNG</li>-->
-        <!--</ul>-->
-    <!--</div>-->
+<!--<div class="title" style="height: 50px;line-height: 22px;color: #ffffff;text-align: center">-->
+<!--<h3>HELP</h3>-->
+<!--</div>-->
+<!--<img src="img/help.png" alt="" style="width: auto;height: 172px;margin-left: 8px">-->
+<!--<div class="brands">-->
+<!--<ul class="brands_ul" id="brands_ul" style="list-style: none">-->
+<!--<li class="selected">SONY</li>-->
+<!--<li class="unselected">Panasonic</li>-->
+<!--<li class="unselected">Canon</li>-->
+<!--<li class="unselected">JVC</li>-->
+<!--<li class="unselected">SAMSUNG</li>-->
+<!--</ul>-->
+<!--</div>-->
 <!--</div>-->
 <!--右边面板-->
 
-<div class="panel panel-right panel-reveal" style="background-color: #ffffff">
-    <div class="title" style="height: 50px;line-height: 22px;color: #ffffff;text-align: center;background-color: #8AD3F3">
-        <h3>FAVORITES</h3>
-    </div>
-</div>
+<!--<div class="panel panel-right panel-reveal" style="background-color: #ffffff">-->
+<!--<div class="title" style="height: 50px;line-height: 22px;color: #ffffff;text-align: center;background-color: #8AD3F3">-->
+<!--<h3>FAVORITES</h3>-->
+<!--</div>-->
+<!--</div>-->
 
 <!-- Views-->
 <div class="views">
@@ -74,28 +75,46 @@
         <div class="navbar theme-white">
 
             <!--HOME Navbar-->
-            <div  data-page="index" class="navbar-inner">
+            <div data-page="index" class="navbar-inner">
                 <div class="left">
-                    <a href="#" data-page="left" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
+                    <a href="#fav"><i class="icon icon-bars"></i></a>
                     <!--<a href="help.html" class="link">hh</a>-->
                 </div>
                 <div class="center sliding contacts-list-header">CODECALC</div>
                 <div class="right">
                     <!--<a href="#" data-page="right" class="link icon-only open-panel open-right-panel"><i class="icon icon-bars"></i></a>-->
 
-                   <i class="icon icon-bars" onclick="turn2Help();"></i>
+                    <i class="icon icon-bars" onclick="turn2Help();"></i>
                 </div>
             </div>
 
             <!--HELP Navbar-->
 
-            <div  data-page="help" class="navbar-inner cached">
-            <!--<div class="center">About</div>-->
+            <div data-page="help" class="navbar-inner cached">
+                <div class="left">
+                    <a href="#home" class="back"><img src="img/back.png" alt=""
+                                                      style="width: 40px;height: 40px;margin-top: 3px;"></a>
+                    <!--<a href="help.html" class="link">hh</a>-->
+                </div>
+                <div class="center sliding contacts-list-header">HELP</div>
             </div>
 
             <!--FAV Navbar-->
-            <div data-page="fav" class="navbar-inner cached" >
-            <!--<div class="center">Services</div>-->
+            <div data-page="fav" class="navbar-inner cached">
+                <!--<div class="center">Services</div>-->
+                <div class="left">
+                    <a href="#home" class="back"><img src="img/back.png" alt=""
+                                                      style="width: 40px;height: 40px;margin-top: 3px;"></a>
+                    <!--<a href="help.html" class="link">hh</a>-->
+                </div>
+                <div class="center sliding contacts-list-header">FAV</div>
+
+                <div class="right">
+                    <!--<a href="#" data-page="right" class="link icon-only open-panel open-right-panel"><i class="icon icon-bars"></i></a>-->
+
+                    <img src="img/add.png" alt="" style="width: 44px;height: 32px;margin-top: -0.5px;"
+                         onclick="addFav();">
+                </div>
             </div>
         </div>
 
@@ -181,11 +200,11 @@
                     </div>
 
 
-                        <div id="middle_bar"><p>AUDIO</p></div>
+                    <div id="middle_bar"><p>AUDIO</p></div>
 
                     <!--<div id="datemark"><a id="markyear"></a><a id="markmonth"></a><a id="markday"></a></div>-->
                     <div id="fuck"
-                         style="width: 100% ; height: 40%; background-color: #ffffff; float: left;margin-left: -10px">
+                         style="width: 100% ; height: 40%; background-color: #ffffff; float: left;">
                         <div class="swiper-container1">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
@@ -341,10 +360,14 @@
                                 <p>TIME</p>
                             </div>
 
-                            <div class="bottom_middle_text" >
-                                <p id="time">30</p>
-                                <!--<input type="number" placeholder="30"/>-->
-                            </div>
+
+                            <input type="number" placeholder="30"
+                                   style="background:transparent;border:1px  #475E6D;width: 40px;height: 30px;color: #ffffff"/>
+                            <!--<div class="bottom_middle_text" >-->
+                            <!--<p id="time">30</p>-->
+
+                            <!--&lt;!&ndash;<input title="ss" style="background:transparent;border:1px solid #ffffff;width: 12px;height: 12px"/>&ndash;&gt;-->
+                            <!--</div>-->
                             <div class="bottom_bottom_text">
                                 <p>HOURS</p>
                             </div>
@@ -355,9 +378,12 @@
                                 <p>STORAGE SPACE</p>
                             </div>
 
-                            <div class="bottom_middle_text">
-                                <p id="storage">420</p>
-                            </div>
+                            <!--<div class="bottom_middle_text">-->
+                            <!--<p id="storage">420</p>-->
+                            <!--</div>-->
+                            <input type="number" placeholder="430"
+                                   style="background:transparent;border:1px  #475E6D;width: 55px;height: 30px;color: #ffffff"/>
+
                             <div class="bottom_bottom_text">
                                 <p>GB</p>
                             </div>
@@ -369,8 +395,8 @@
 
             <!--HELP PAGE-->
             <div data-page="help" class="page cached">
-                <div class="page-content">
-                    <img src="img/help.png" alt="" style="width: auto;height: 172px;margin-left: 8px">
+                <div class="page-content" style="background-color: #88D7F4">
+                    <img src="img/choose.png" alt="" style="width: auto;height: 225px;margin-left: 44px">
                     <div class="brands">
                         <ul class="brands_ul" id="brands_ul" style="list-style: none">
                             <li class="selected">SONY</li>
@@ -384,11 +410,50 @@
             </div>
             <!--FAVERITE PAGE-->
             <div data-page="fav" class="page cached">
-                <div class="page-content">
-                    <p>这是嘿嘿界面</p>
+                <div class="page-content" style="background-color: #88D7F4">
+                    <!--<div class="card" style="margin: 0 auto;">-->
+                    <!--<div style="width: 50px;height: 180px;border-radius:8px 0 0 8px ;background-color: #425665;float: left"></div>-->
+                    <!--<div style="width: 290px;height: 180px;border-radius: 0 8px 8px 0;background-color: #ffffff;float: left"></div>-->
+                    <!--</div>-->
+
+                    <div class="list-block">
+                        <ul id="cards_ul">
+
+                            <li class="swipeout" style="background-color: #88D7F4">
+                                <div class="swipeout-content item-content" style="background-color: #88D7F4">
+                                    <!--<div class="item-media">点点滴滴</div>-->
+                                    <!--<div class="item-inner">士大夫士大夫</div>-->
+                                    <div class="card" style="margin: 0 auto;background-color: #88D7F4">
+                                        <div style="width: 50px;height: 180px;border-radius:8px 0 0 8px ;background-color: #425665;float: left"></div>
+                                        <div style="width: 290px;height: 180px;border-radius: 0 8px 8px 0;background-color: #ffffff;float: left">
+
+
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="swipeout-actions-right">
+                                    <a href="#" class="swipeout-delete" style="background-color: #FFE036">Action 1</a>
+                                </div>
+                            </li>
+
+
+                            <!--<li class="swipeout">-->
+                            <!--<div class="swipeout-content item-content">-->
+                            <!--<div class="item-media">SD阿发撒旦法撒旦法士大夫是</div>-->
+                            <!--<div class="item-inner">撒旦法士大夫</div>-->
+                            <!--</div>-->
+                            <!--<div class="swipeout-actions-right">-->
+                            <!--<a href="#" class="action1 bg-orange">Action 1</a>-->
+                            <!--<a href="#" class="action2">Action 2</a>-->
+                            <!--</div>-->
+                            <!--</li>-->
+                        </ul>
+                    </div>
+
                 </div>
             </div>
-
 
         </div>
     </div>
@@ -416,6 +481,32 @@
 <!--e.preventDefault();-->
 <!--}, false);-->
 <!--</script>-->
+
+<!--模板-->
+<script id="cardTemplate" type="text/template7">
+
+    <li class="swipeout" style="background-color: #88D7F4">
+        <div class="swipeout-content item-content" style="background-color: #88D7F4">
+            <!--<div class="item-media">点点滴滴</div>-->
+            <!--<div class="item-inner">士大夫士大夫</div>-->
+            <div class="card" style="margin: 0 auto;background-color: #88D7F4">
+                <div style="width: 50px;height: 180px;border-radius:8px 0 0 8px ;background-color: #425665;float: left"></div>
+                <div style="width: 290px;height: 180px;border-radius: 0 8px 8px 0;background-color: #ffffff;float: left">
+                    <p>{{test}}</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="swipeout-actions-right">
+            <a href="#" class="swipeout-delete" style="background-color: #FFE036">Action 1</a>
+        </div>
+    </li>
+</script>
+
+
+
+
+
 <script>
 
     //    var swiper = new Swiper('.swiper-container', {

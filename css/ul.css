@@ -1,9 +1,9 @@
 .unselected{
     border-bottom: 1px solid black ;height: 43px;width: 180px ; font-size: 18px;line-height: 43px;text-align: center;
-    background-color: #475E6D;
+    background-color: #475E6D;margin-left: 63px;
 }
 
 .selected{
     border-bottom: 1px solid black ;height: 43px;width: 180px ; font-size: 18px;line-height: 43px;text-align: center;
-    background-color: #FFE036;
+    background-color: #FFE036;margin-left: 63px;
 }
