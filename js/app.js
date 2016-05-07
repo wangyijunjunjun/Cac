@@ -74,6 +74,11 @@ function turn2Help() {
     mainView.router.load({pageName: 'help'});
 }
 
+//function back2Home(){
+//    mainView.router.load({pageName: 'home'});
+//}
+
+
 //<li class="swipeout" style="background-color: #88D7F4">
 //    <div class="swipeout-content item-content" style="background-color: #88D7F4">
 //    <!--<div class="item-media">点点滴滴</div>-->
@@ -139,11 +144,10 @@ function addFav() {
         + "<h4 style='margin: -30px 0 0 51px;font-style: normal'>hhhhh</h4></div>"
         + "<div class='distract02'>"
         + "<h4 style='margin: -27px 0 0 51px;font-style: normal'>hhhhh</h4></div>"
-        + "</div></div></div></div>"
-        + "<div class='swipeout-actions-right'>"
-        + "<a href='#' class='swipeout-delete' style='background-color: #FFE036'>Action 1</a>"
-        + "</div>";
-
+        + "</div></div></div></div>";
+        //+ "<div class='swipeout-actions-right'>"
+        //+ "<a href='#' class='swipeout-delete' style='background-color: #FFE036;width: 30px'>Action 1</a>"
+        //+ "</div>";
 
     var body = document.getElementById("cards_ul");
 

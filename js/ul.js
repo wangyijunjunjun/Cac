@@ -30,5 +30,7 @@ $("#brands_ul li").bind("click", function () {
 });
 
 function turn2Sony(){
-    mainView.router.load({pageName:'fav'});
+    //mainView.router.load({pageName:'sony'});
+$("#brands_div").hide();
+    $("#sony_part").show();
 }

@@ -1,6 +1,5 @@
 body{
     background-color: #ffffff;
-
 }
 
 #middle_bar{
@@ -11,8 +10,18 @@ body{
     line-height: 40px;
     font-size:16px;text-decoration:none;
     color: #ffffff;
-    margin-top: -15px;
+    /*margin-top: 5px;*/
     z-index: 20;
+    /*position: relative;*/
+    /*top: 340px;;*/
+    /*要怎样才能...垂直,依次,布局呢??*/
+    float: left;
+    padding-top: 4px;
+
+}
+
+#middle_bar p{
+    margin: 0;
 }
 
 .navbar{
@@ -100,18 +109,125 @@ height: 30px;
 
 
 
+@media (min-device-width : 375px) and (max-device-width : 667px) and (-webkit-min-device-pixel-ratio : 2){
+    /*iphone 6*/
+
+    .tableDotDiv{width: 100%;background-color: #ffffff;height: 233px;}
+
+    .swiper-button-next, .swiper-button-prev{
+        top: 50%;
+    }
+
+
+    .swiper-container1 {
+        margin: -5px 0px;
+        width: 33.3%;
+        /*margin-left: -10px;*/
+        height: 180px;
+        /*position: fixed;*/
+        float: left;
+        overflow: hidden;
+        font-size:16px;text-decoration:none;
+    }
+
+    .swiper-container3 {
+        margin: -5px 0px;
+        /*margin-left: -10px;*/
+        width: 33.3%;
+        height: 180px;
+        /*position: fixed;*/
+        float: left;
+        overflow: hidden;
+    }
+
+
+
+    .swiper-container2 {
+        margin: -5px 0px;
+        /*margin-left: -10px;*/
+        width: 33.3%;
+        height: 180px;
+        /*position: fixed;*/
+        float: left;
+        overflow: hidden;
+    }
+
+
+
+    .swiper-slide .title {
+        width: 50px;
+        /*font-style: italic;*/
+        font-size: 19px;
+        margin-bottom: 0;
+        line-height: 35px;
+    }
+}
+
+
+@media (min-device-width : 414px) and (max-device-width : 736px) and (-webkit-min-device-pixel-ratio : 3){
+
+    .tableDotDiv{width: 100%;background-color: #ffffff;height: 259px;}
+    .swiper-button-next, .swiper-button-prev{
+        top: 49%;
+    }
+
+
+    .swiper-container1 {
+        font-size:16px;text-decoration:none;
+        margin: 9px 0px;
+        width: 33.3%;
+        /*margin-left: -10px;*/
+        height: 180px;
+        /*position: fixed;*/
+        float: left;
+        overflow: hidden;
+    }
+
+    .swiper-container3 {
+        margin: 9px 0px;
+        /*margin-left: -10px;*/
+        width: 33.3%;
+        height: 180px;
+        /*position: fixed;*/
+        float: left;
+        overflow: hidden;
+    }
 
 
 
 
+    .swiper-container2 {
+        margin: 9px 0px;
+        /*margin-left: -10px;*/
+        width: 33.3%;
+        height: 180px;
+        /*position: fixed;*/
+        float: left;
+        overflow: hidden;
+    }
 
 
 
+    .swiper-slide .title {
+        width: 50px;
+        /*font-style: italic;*/
+        font-size: 21px;
+        margin-bottom: 0;
+        line-height: 35px;
+    }
+
+}
 
 
+.models_ul li{
+    list-style: none
+}
 
 
+/*#brand{*/
+    /*letter-spacing: 30px;*/
 
+/*}*/
 
 
 

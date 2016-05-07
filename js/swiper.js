@@ -37,7 +37,11 @@ var swiper6 = new Swiper('.swiper-container5', {
     direction: 'horizontal',
 
     onSlideChangeEnd: function (swiper6) {
-        // alert('事件触发了;');
+        var _ = $(".swiper-container5 .swiper-slide-active");
+        animationText = _.children('div.title').html().toString();
+        alert('事件触发了;');
+        //animation(animationText);
+         alert(animationText);
         //要怎样设置这个回调呢,没有原生的提供,那么要想别的法子了
         $(".swiper-slide-active").click(function () {
             //alert($(this).children('div.title').html());
@@ -58,16 +62,21 @@ var swiper5 = new Swiper('.swiper-container4', {
     observer: true,
     direction: 'horizontal',
 
-    //onSlideChangeEnd: function (swiper5) {
-    //    // alert('事件触发了;');
-    //    //要怎样设置这个回调呢,没有原生的提供,那么要想别的法子了
-    //    $(".swiper-slide-active").click(function () {
-    //        //alert($(this).children('div.title').html());
-    //        animationText = $(this).children('div.title').html().toString();
-    //        alert(animationText);
-    //        animation(animationText);
-    //    });
-    //}
+    onSlideChangeEnd: function (swiper5) {
+        //animation(animationText);
+var _ = $(".swiper-container4 .swiper-slide-active");
+        animationText = _.children('div.title').html().toString();
+         alert('事件触发了;');
+        //alert(animationText);
+        animation();
+        //要怎样设置这个回调呢,没有原生的提供,那么要想别的法子了
+        _.click(function () {
+            //alert($(this).children('div.title').html());
+
+            alert(animationText);
+            //animation(animationText);
+        });
+    }
 });
 
 
@@ -121,7 +130,6 @@ var swiper4 = new Swiper('.swiper-container3', {
     observer: true,
     autoHeight: true,
 
-
     onSlideChangeEnd: function (swiper4) {
         // alert('事件触发了;');
         //要怎样设置这个回调呢,没有原生的提供,那么要想别的法子了
@@ -134,18 +142,30 @@ var swiper4 = new Swiper('.swiper-container3', {
 });
 
 
-//动画函数 四个swiper 数十个text
-function animation(text) {
-    switch (text) {
+//动画函数 六个swiper 数十个text
+function animation() {
+    switch (animationText) {
         case "SucksMan":
             alert(animationText);
             break;
         case "22.9":
             alert(animationText);
             break;
+        case "12ch":
+            alert(animationText);
+            //redrawPiechart();
+            break;
+        case "16ch":
+            alert(animationText);
+            //redrawPiechart();
+            break;
     }
 }
 
+
+function redrawPiechart(){
+
+}
 
 function changeSwipers() {
     //先拿到globalConfig对象的属性及index
@@ -153,10 +173,12 @@ function changeSwipers() {
     indexkhz = getIndex(khzs, globalConfig.khz);
     indexbit = getIndex(bits, globalConfig.bit);
 
-
+    swiper.slideTo(1,1000,false);
     swiper2.slideTo(1, 1000, false);
     swiper3.slideTo(0, 1000, false);
     swiper4.slideTo(0, 1000, false);
+    swiper5.slideTo(0, 1000, false);
+    swiper6.slideTo(0, 1000, false);
 }
 
 //通过遍李数组,获取指定元素的索引值

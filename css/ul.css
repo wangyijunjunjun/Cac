@@ -7,3 +7,12 @@
     border-bottom: 1px solid black ;height: 43px;width: 180px ; font-size: 18px;line-height: 43px;text-align: center;
     background-color: #FFE036;margin-left: 63px;
 }
+
+.unselected_model{
+
+}
+
+.unselected_model{
+    border-bottom: 1px solid white ;height: 48px;width: 200px ; font-size: 22px;line-height: 47px;text-align: center;
+    margin-left: 58px;font-weight: 200;color: white;
+}

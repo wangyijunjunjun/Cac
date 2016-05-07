@@ -19,6 +19,18 @@
     <link rel="stylesheet" href="css/input.css">
     <!--<link rel="stylesheet" href="css/myScroll.css">-->
 </head>
+
+<!--<style>-->
+<!--/*iphone6plus*/-->
+
+<!--@media(min-device-width:414px)and(max-device-width:736px)and(-webkit-min-device-pixel-ratio:3){-->
+<!--.tableDotDiv{-->
+<!--height: 256px;-->
+<!--}-->
+
+<!--}-->
+
+<!--</style>-->
 <body onload="loaded()" style="width:100%;height:100%;background-color:#ffffff">
 
 <!-- Statusbar overlay-->
@@ -88,17 +100,6 @@
                 </div>
             </div>
 
-            <!--HELP Navbar-->
-
-            <div data-page="help" class="navbar-inner cached">
-                <div class="left">
-                    <a href="#home" class="back"><img src="img/back.png" alt=""
-                                                      style="width: 40px;height: 40px;margin-top: 3px;"></a>
-                    <!--<a href="help.html" class="link">hh</a>-->
-                </div>
-                <div class="center sliding contacts-list-header">HELP</div>
-            </div>
-
             <!--FAV Navbar-->
             <div data-page="fav" class="navbar-inner cached">
                 <!--<div class="center">Services</div>-->
@@ -116,6 +117,31 @@
                          onclick="addFav();">
                 </div>
             </div>
+
+            <!--HELP Navbar-->
+            <div data-page="help" class="navbar-inner cached">
+                <div class="left">
+                    <a href="#" class="back"><img src="img/back.png" alt=""
+                                                  style="width: 40px;height: 40px;margin-top: 3px;"></a>
+                    <!--<a href="help.html" class="link">hh</a>-->
+
+                    <!--<img src="img/back.png" alt="" style="width: 40px;height: 40px;margin-top: 3px;"-->
+                    <!--onclick="back2Home();">-->
+                </div>
+                <div class="center sliding contacts-list-header" style="color: #ffffff ;font-weight: 200">HELP</div>
+            </div>
+
+            <!--bug:-->
+            <!--SONY Navbar-->
+            <!--<div data-page="sony" class="navbar-inner cached">-->
+            <!--<div class="left">-->
+            <!--<a href="#" class="back"><img src="img/back.png" alt=""-->
+            <!--style="width: 40px;height: 40px;margin-top: 3px;"></a>-->
+            <!--&lt;!&ndash;<a href="help.html" class="link">hh</a>&ndash;&gt;-->
+            <!--</div>-->
+            <!--<div class="center sliding contacts-list-header" style="color: #ffffff ;font-weight: 200">HELP</div>-->
+            <!--</div>-->
+
         </div>
 
 
@@ -136,9 +162,9 @@
                     <div id="tabs-body" class="tabs-body">
                         <div style="display: block;">
 
-                            <div class="tableDotDiv" style="width: 100%;background-color: #ffffff;height: 228px;">
-                            <!--上方的图-->
-                            <img src="img/1080p.png" alt="" style="width: 100% ; margin-bottom: -10px;">
+                            <div class="tableDotDiv">
+                                <!--上方的图-->
+                                <img src="img/1080p.png" alt="" style="width: 100% ; margin-bottom: -10px;">
                             </div>
                             <div class="swiperbody">
                                 <!-- Swiper -->
@@ -171,25 +197,24 @@
                             </div>
                         </div>
 
-
                         <div style="display: none;">
 
-                            <div class="tableDotDiv" style="width: 100%;background-color: #ffffff;height: 228px;">
-                            <!--点阵-->
-                            <div class="dottable" style="padding-top: 40px">
-                            <table id="tableDot" cellpadding="2px" cellspacing="2px"
-                            style="margin: auto auto;vertical-align: middle">
-                            <script>
-                            for (var i = 0; i < 8; i++) {
-                            document.write("<tr>");
-                            for (var j = 0; j < 15; j++) {
-                            document.write("<td></td>");
-                            }
-                            document.write("</tr>");
-                            }
-                            </script>
-                            </table>
-                            </div>
+                            <div class="tableDotDiv">
+                                <!--点阵-->
+                                <div class="dottable" style="padding-top: 40px">
+                                    <table id="tableDot" cellpadding="2px" cellspacing="2px"
+                                           style="margin: auto auto;vertical-align: middle">
+                                        <script>
+                                            for (var i = 0; i < 8; i++) {
+                                                document.write("<tr>");
+                                                for (var j = 0; j < 15; j++) {
+                                                    document.write("<td></td>");
+                                                }
+                                                document.write("</tr>");
+                                            }
+                                        </script>
+                                    </table>
+                                </div>
                             </div>
                             <!--<img src="img/1080p.png" alt="" style="width: 100% ; margin-bottom: -10px;">-->
 
@@ -224,7 +249,16 @@
 
                         <div style="display: none;">
 
-                            <div class="tableDotDiv" style="width: 100%;background-color: #ffffff;height: 228px;"></div>
+                            <div class="tableDotDiv">
+                                <!--piechart-->
+                                <div id="piechart" style="padding: 32px 0 0 119px;">
+                                </div>
+
+                                <span style="    margin: 0px 0px -39px 180px;z-index: 999">hhhh</span>
+
+                                <!--现在来玩玩div重叠-->
+                                <!--<div style="width: 40px;height: 30px;background-color: #000000"></div>-->
+                            </div>
 
 
                             <div class="swiper-container4">
@@ -282,18 +316,21 @@
                     <!--</div>-->
                     <!--&lt;!&ndash; Add Arrows &ndash;&gt;-->
                     <!--<div class="swiper-button-next"></div>-->
-
                     <!--<div class="swiper-button-prev"></div>-->
                     <!--</div>-->
                     <!--</div>-->
 
+                    <div class="middle">
+                        <div style="float: left;width: 100%;height: 7px;background-color: #ffffff"></div>
+                        <div id="middle_bar"><p>AUDIO</p></div>
 
-                    <div id="middle_bar"><p>AUDIO</p></div>
+                    </div>
+
 
                     <!--<div id="datemark"><a id="markyear"></a><a id="markmonth"></a><a id="markday"></a></div>-->
                     <div id="fuck"
                          style="width: 100% ; height: 40%; background-color: #ffffff; float: left;">
-                        <div class="swiper-container1" >
+                        <div class="swiper-container1">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <div class="title">4ch</div>
@@ -438,7 +475,6 @@
                             <div class="bottom_bottom_text">
                                 <p>MB/s</p>
                             </div>
-
                         </div>
 
                         <div class="bottom-item">
@@ -483,6 +519,9 @@
             <div data-page="help" class="page cached">
                 <div class="page-content" style="background-color: #88D7F4">
                     <img src="img/choose.png" alt="" style="width: auto;height: 225px;margin-left: 44px">
+
+
+                    <div id="brands_div">
                     <div class="brands">
                         <ul class="brands_ul" id="brands_ul" style="list-style: none">
                             <li class="selected">SONY</li>
@@ -492,6 +531,22 @@
                             <li class="unselected">SAMSUNG</li>
                         </ul>
                     </div>
+                        </div>
+                    <div id="sony_part" style="display: none">
+                        <p style="letter-spacing: 41px;font-size: 30px;width: 200px;color: #ffffff;text-align: center;margin: 0 99px;font-weight: 200;border-bottom: 1px solid white;">
+                            SONY</p>
+
+                        <div class="models">
+                            <ul class="models_ul" id="models_ul" style="list-style: none">
+                                <li class="unselected_model">SONY</li>
+                                <li class="unselected_model">Panasonic</li>
+                                <li class="unselected_model">Canon</li>
+                                <li class="unselected_model">JVC</li>
+                                <li class="unselected_model">SAMSUNG</li>
+                            </ul>
+                        </div>
+                    </div>
+
                 </div>
             </div>
             <!--FAVERITE PAGE-->
@@ -554,6 +609,55 @@
                                 </div>
                             </li>
 
+
+                            <li class="swipeout" style="background-color: #88D7F4 ;padding-bottom: 16px">
+                                <div class="swipeout-content item-content"
+                                     style="background-color: #88D7F4 ; border: #88D7F4 ;margin-left: -12px;">
+                                    <div class="card" style="margin: 0 auto;background-color: #88D7F4">
+                                        <div style="width: 50px;height: 180px;border-radius:8px 0 0 8px ;background-color: #425665;float: left"></div>
+                                        <div style="width: 290px;height: 180px;border-radius: 0 8px 8px 0;background-color: #ffffff;float: left">
+                                            <h3 style="margin: 12px 0 -10px 16px;font-size: 22px">CUSTOM 1</h3>
+
+                                            <div class="sixConfig" style="margin: 24px 0 0 16px;">
+                                                <div class="distract01">
+                                                    <img src="img/card01.png" alt="" style="width: 40px;height: 32px;">
+                                                    <h4 style="margin: -30px 0 0px 51px;font-style: normal">hhhhh</h4>
+                                                </div>
+
+                                                <div class="distract02">
+                                                    <img src="img/card04.png" alt=""
+                                                         style="width: 40px;margin-top: 5px;height: 32px;">
+                                                    <h4 style="margin: -30px 0 0 51px;font-style: normal">hhhhh</h4>
+                                                </div>
+
+                                                <div class="distract01">
+                                                    <img src="img/card02.png" alt="" style="width: 40px;height: 32px;">
+                                                    <h4 style="margin: -30px 0 0 51px;font-style: normal">hhhhh</h4>
+                                                </div>
+
+                                                <div class="distract02">
+                                                    <h4 style="margin: 46px 0 0 51px;font-style: normal">hhhhh</h4>
+                                                </div>
+
+                                                <div class="distract01">
+                                                    <img src="img/card03.png" alt="" style="width: 40px;height: 32px;">
+
+                                                    <h4 style="margin: -30px 0 0 51px;font-style: normal">hhhhh</h4>
+                                                </div>
+                                                <div class="distract02">
+
+                                                    <h4 style="margin: -27px 0 0 51px;font-style: normal">hhhhh</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swipeout-actions-right">
+                                    <a href="#" class="swipeout-delete" style="background-color: #FFE036 ; width: 30px">Action
+                                        1</a>
+                                </div>
+                            </li>
+
                             <!--<li class="swipeout">-->
                             <!--<div class="swipeout-content item-content">-->
                             <!--<div class="item-media">SD阿发撒旦法撒旦法士大夫是</div>-->
@@ -570,18 +674,42 @@
                 </div>
             </div>
 
+            <!--<div data-page="sony" class="page cached">-->
+            <!--<div class="page-content" style="background-color: #88D7F4">-->
+            <!--<img src="img/chooseModel.png" alt="" style="width: auto;height: 225px;margin-left: 45px">-->
+
+            <!--<p style="letter-spacing: 41px;font-size: 30px;width: 200px;color: #ffffff;text-align: center;margin: 0 99px;font-weight: 200;border-bottom: 1px solid white;">-->
+            <!--SONY</p>-->
+
+            <!--<div class="models">-->
+            <!--<ul class="models_ul" id="models_ul" style="list-style: none">-->
+            <!--<li class="unselected_model">SONY</li>-->
+            <!--<li class="unselected_model">Panasonic</li>-->
+            <!--<li class="unselected_model">Canon</li>-->
+            <!--<li class="unselected_model">JVC</li>-->
+            <!--<li class="unselected_model">SAMSUNG</li>-->
+            <!--</ul>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--</div>-->
         </div>
-    </div>
-</div>
 </body>
 <!--<script type="text/javascript" src="lib/iscroll.js"></script>-->
 <script type="text/javascript" src="lib/framework7.min.js"></script>
 <script type="text/javascript" src="js/app.js"></script>
 <script src="lib/jquery-1.10.1.min.js" type="text/javascript"></script>
 <script type="text/javascript" src="lib/swiper-3.3.1.min.js"></script>
+<script type="text/javascript" src="lib/tween.js"></script>
+<script type="text/javascript" src="lib/lodash.0.5.0.js"></script>
+<script type="text/javascript" src="lib/requestAnimationFrame.js"></script>
+<script type="text/javascript" src="lib/pieChart.js"></script>
+
 <script type="text/javascript" src="js/tabs.js"></script>
 <script src="js/swiper.js" type="application/javascript"></script>
 <script src="js/ul.js" type="application/javascript"></script>
+
 <!--<script src="js/tabs.js" type="application/javascript"></script>-->
 <!--<script type="text/javascript">-->
 <!--var myScroll, myScroll02, myScroll03;-->
@@ -610,7 +738,6 @@
                     <p>{{test}}</p>
                 </div>
             </div>
-
         </div>
         <div class="swipeout-actions-right">
             <a href="#" class="swipeout-delete" style="background-color: #FFE036">Action 1</a>
@@ -664,5 +791,17 @@
             })
         })
     }
+
+    pieChart({
+        fillPercent: 77,
+        backgroundStrokeColor: "#88D7F4",
+        foregroundStrokeColor: "#F4F4F4",
+        animationRate: 322,
+        radius: 66,
+        stroke: 26,
+        container: document.getElementById("piechart")
+    });
+
+
 </script>
 </html>
