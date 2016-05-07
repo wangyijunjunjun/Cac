@@ -144,10 +144,10 @@ function addFav() {
         + "<h4 style='margin: -30px 0 0 51px;font-style: normal'>hhhhh</h4></div>"
         + "<div class='distract02'>"
         + "<h4 style='margin: -27px 0 0 51px;font-style: normal'>hhhhh</h4></div>"
-        + "</div></div></div></div>";
-        //+ "<div class='swipeout-actions-right'>"
-        //+ "<a href='#' class='swipeout-delete' style='background-color: #FFE036;width: 30px'>Action 1</a>"
-        //+ "</div>";
+        + "</div></div></div></div>"
+        + "<div class='swipeout-actions-right'>"
+        + "<a href='#' class='swipeout-delete' style='background-color: #FFE036;width: 30px'>Action 1</a>"
+        + "</div>";
 
     var body = document.getElementById("cards_ul");
 

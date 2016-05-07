@@ -39,9 +39,9 @@ var swiper6 = new Swiper('.swiper-container5', {
     onSlideChangeEnd: function (swiper6) {
         var _ = $(".swiper-container5 .swiper-slide-active");
         animationText = _.children('div.title').html().toString();
-        alert('事件触发了;');
+        //alert('事件触发了;');
         //animation(animationText);
-         alert(animationText);
+        // alert(animationText);
         //要怎样设置这个回调呢,没有原生的提供,那么要想别的法子了
         $(".swiper-slide-active").click(function () {
             //alert($(this).children('div.title').html());
@@ -66,7 +66,7 @@ var swiper5 = new Swiper('.swiper-container4', {
         //animation(animationText);
 var _ = $(".swiper-container4 .swiper-slide-active");
         animationText = _.children('div.title').html().toString();
-         alert('事件触发了;');
+         //alert('事件触发了;');
         //alert(animationText);
         animation();
         //要怎样设置这个回调呢,没有原生的提供,那么要想别的法子了
@@ -141,7 +141,7 @@ var swiper4 = new Swiper('.swiper-container3', {
     }
 });
 
-
+//下方swiper的值改变,上方的图形改变
 //动画函数 六个swiper 数十个text
 function animation() {
     switch (animationText) {
@@ -152,20 +152,17 @@ function animation() {
             alert(animationText);
             break;
         case "12ch":
-            alert(animationText);
-            //redrawPiechart();
+            //alert(animationText);
+            redrawPiechart(30);
             break;
         case "16ch":
-            alert(animationText);
-            //redrawPiechart();
+            //alert(animationText);
+            redrawPiechart(50);
             break;
     }
 }
 
 
-function redrawPiechart(){
-
-}
 
 function changeSwipers() {
     //先拿到globalConfig对象的属性及index
