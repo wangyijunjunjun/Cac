@@ -40,7 +40,7 @@ var swiper6 = new Swiper('.swiper-container5', {
         var _ = $(".swiper-container5 .swiper-slide-active");
         animationText = _.children('div.title').html().toString();
         //alert('事件触发了;');
-        //animation(animationText);
+        animation();
         // alert(animationText);
         //要怎样设置这个回调呢,没有原生的提供,那么要想别的法子了
         $(".swiper-slide-active").click(function () {
@@ -49,7 +49,17 @@ var swiper6 = new Swiper('.swiper-container5', {
             alert(animationText);
             animation(animationText);
         });
-    }
+    },
+
+    //
+    //onSlideChangeStart:function(swiper6){
+    //    var _ = $(".swiper-container5 .swiper-slide-active");
+    //    animationText = _.children('div.title').html().toString();
+    //    alert(animationTextl);
+    //}
+
+
+
 });
 
 var swiper5 = new Swiper('.swiper-container4', {
@@ -141,12 +151,13 @@ var swiper4 = new Swiper('.swiper-container3', {
     }
 });
 
+
 //下方swiper的值改变,上方的图形改变
 //动画函数 六个swiper 数十个text
 function animation() {
     switch (animationText) {
         case "SucksMan":
-            alert(animationText);
+            //alert(animationText);
             break;
         case "22.9":
             alert(animationText);
@@ -158,6 +169,9 @@ function animation() {
         case "16ch":
             //alert(animationText);
             redrawPiechart(50);
+            break;
+        case "uuuu":
+            renderDotTable("B");
             break;
     }
 }

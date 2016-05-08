@@ -161,6 +161,10 @@ height: 30px;
         margin-bottom: 0;
         line-height: 35px;
     }
+
+    #piechart{
+        padding: 32px 0 0 119px;
+    }
 }
 
 
@@ -170,7 +174,6 @@ height: 30px;
     .swiper-button-next, .swiper-button-prev{
         top: 49%;
     }
-
 
     .swiper-container1 {
         font-size:16px;text-decoration:none;
@@ -194,8 +197,6 @@ height: 30px;
     }
 
 
-
-
     .swiper-container2 {
         margin: 9px 0px;
         /*margin-left: -10px;*/
@@ -206,14 +207,17 @@ height: 30px;
         overflow: hidden;
     }
 
-
-
     .swiper-slide .title {
         width: 50px;
         /*font-style: italic;*/
         font-size: 21px;
         margin-bottom: 0;
         line-height: 35px;
+    }
+
+    #piechart{
+        position: absolute;
+        padding: 37px 0 0 134px;
     }
 
 }
