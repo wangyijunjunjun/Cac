@@ -154,6 +154,10 @@ function addFav() {
     body.appendChild(el);
 
 
+    //由于出现了上面的bug,不得不...目前想到的方法是dom缓存,点击显示
+    //统计点击次数得到index,lis.eq(index).show();当然之前要拿到所有的控件并赋值
+}
+
 //<li class="swipeout" style="background-color: #88D7F4">
 //        <div class="swipeout-content item-content" style="background-color: #88D7F4">
 //        <div class="card" style="margin: 0 auto;background-color: #88D7F4">
@@ -226,8 +230,6 @@ function addFav() {
     //    + "<a href=''#' class='swipeout-delete' style='background-color: #FFE036'>Action 1</a>"
     //    + "</div></li>");
 
-
-}
 
 //var KeyBoard = function(input){
 //    var body

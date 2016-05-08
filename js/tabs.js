@@ -3,8 +3,6 @@
  */
 //$(document).ready(function () {
 
-
-
     $("#tabs li").bind("click", function () {
         var index = $(this).index();
         var divs = $("#tabs-body > div");
