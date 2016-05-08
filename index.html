@@ -141,16 +141,13 @@
             <!--</div>-->
             <!--<div class="center sliding contacts-list-header" style="color: #ffffff ;font-weight: 200">HELP</div>-->
             <!--</div>-->
-
         </div>
 
-
         <div class="pages navbar-through">
-
             <!--HOME PAGE-->
             <div data-page="home" class="page">
+                <!--<div class="page-content" style="margin-top: -223px;">-->
                 <div class="page-content">
-
                     <!--三个tab-->
                     <div class="tabs">
                         <ul id="tabs">
@@ -252,8 +249,10 @@
                                 <!--piechart-->
                                 <div id="piechart">
                                 </div>
-                                <p style="position:absolute;top: 176px;margin: 0px 0px -35px 182px;z-index: 999;font-size: 28px">5.4:1</p>
-                                <p style="color:#F4F4F4;position:absolute;top: 206px;margin: 0px 0px -35px 182px;z-index: 999;font-size: 11px">Compression <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ratio</p>
+                                <p style="position:absolute;top: 176px;margin: 0px 0px -35px 182px;z-index: 999;font-size: 28px">
+                                    5.4:1</p>
+                                <p style="color:#F4F4F4;position:absolute;top: 206px;margin: 0px 0px -35px 182px;z-index: 999;font-size: 11px">
+                                    Compression <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ratio</p>
                                 <!--现在来玩玩div重叠-->
                                 <!--<div style="width: 40px;height: 30px;background-color: #000000"></div>-->
                             </div>
@@ -282,7 +281,6 @@
                                 <div class="swiper-button-next"></div>
 
                                 <div class="swiper-button-prev"></div>
-
 
                             </div>
 
@@ -327,7 +325,7 @@
 
                     <!--<div id="datemark"><a id="markyear"></a><a id="markmonth"></a><a id="markday"></a></div>-->
                     <div id="fuck"
-                         style="width: 100% ; height: 40%; background-color: #ffffff; float: left;">
+                         style="width: 100% ; height: 32%; background-color: #ffffff; float: left;">
                         <div class="swiper-container1">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
@@ -345,7 +343,6 @@
                                 <div class="swiper-slide">
                                     <div class="title">20ch</div>
                                 </div>
-
                             </div>
                         </div>
 
@@ -481,7 +478,7 @@
                             </div>
 
 
-                            <input type="number" placeholder="30"
+                            <input id="time_input" type="number" readonly="readonly" placeholder="30"
                                    style="background:transparent;border:1px  #475E6D;width: 40px;height: 30px;color: #ffffff"/>
                             <!--<div class="bottom_middle_text" >-->
                             <!--<p id="time">30</p>-->
@@ -497,11 +494,10 @@
                             <div class="bottom_top_text">
                                 <p>STORAGE SPACE</p>
                             </div>
-
                             <!--<div class="bottom_middle_text">-->
                             <!--<p id="storage">420</p>-->
                             <!--</div>-->
-                            <input type="number" placeholder="430"
+                            <input id="storage_input" readonly="readonly" type="number" placeholder="430"
                                    style="background:transparent;border:1px  #475E6D;width: 55px;height: 30px;color: #ffffff"/>
 
                             <div class="bottom_bottom_text">
@@ -519,16 +515,16 @@
                     <img src="img/choose.png" alt="" style="width: auto;height: 225px;margin-left: 44px">
 
                     <div id="brands_div">
-                    <div class="brands">
-                        <ul class="brands_ul" id="brands_ul" style="list-style: none">
-                            <li class="selected">SONY</li>
-                            <li class="unselected">Panasonic</li>
-                            <li class="unselected">Canon</li>
-                            <li class="unselected">JVC</li>
-                            <li class="unselected">SAMSUNG</li>
-                        </ul>
-                    </div>
+                        <div class="brands">
+                            <ul class="brands_ul" id="brands_ul" style="list-style: none">
+                                <li class="selected">SONY</li>
+                                <li class="unselected">Panasonic</li>
+                                <li class="unselected">Canon</li>
+                                <li class="unselected">JVC</li>
+                                <li class="unselected">SAMSUNG</li>
+                            </ul>
                         </div>
+                    </div>
                     <div id="sony_part" style="display: none">
                         <p style="letter-spacing: 41px;font-size: 30px;width: 200px;color: #ffffff;text-align: center;margin: 0 99px;font-weight: 200;border-bottom: 1px solid white;">
                             SONY</p>
@@ -692,6 +688,8 @@
             <!--</div>-->
             <!--</div>-->
         </div>
+    </div>
+</div>
 </body>
 <!--<script type="text/javascript" src="lib/iscroll.js"></script>-->
 <script type="text/javascript" src="lib/framework7.min.js"></script>
@@ -765,6 +763,19 @@
 
     window.onload = function () {
         renderDotTable("A");
+
+        //键盘
+//        var time_input = document.getElementById("time_input");
+//        var storage_input = document.getElementById("storage_input");
+//
+//        time_input.onclick = function () {
+//            alert("hhh");
+//            new KeyBoard(time_input);
+//        }
+//
+//        storage_input.onclick = function () {
+//            new KeyBoard(storage_input);
+//        }
     }
 
     //    点阵
@@ -788,16 +799,12 @@
         })
     }
 
-
-    function reRenderDotTable(index){
+    function reRenderDotTable(index) {
         renderDotTable(index);
     }
 
 
-
-
     //关于js中的{}和[]:   首先两者都是对象 , 其中都有元素 , 唯一不同的是 , {}里面需要键值对 , []里面不需要键值对
-
 
 
 </script>
