@@ -595,7 +595,7 @@
                                     </div>
                                 </div>
                                 <div class="swipeout-actions-right">
-                                    <a href="#" class="swipeout-delete" style="background-color: #FFE036 ; width: 30px">Action
+                                    <a href="#" class="swipeout-delete" style="background-color: #FFE036 ; height:181px;width: 30px">Action
                                         1</a>
                                 </div>
                             </li>
@@ -740,8 +740,6 @@
 
         //首先,下面这行代码是有效的
 //        lis.eq(clickCount -1).show();
-
-
         //用+=这种方式再试一次
 
         <!--<li class="swipeout" style="background-color: #88D7F4 ;padding-bottom: 16px">-->
@@ -755,25 +753,24 @@
                 + "<div class='sixConfig' style='margin: 24px 0 0 16px;'>"
                 + "<div class='distract01'>"
                 + "<img src='img/card01.png' alt='' style='width: 40px;height: 32px;'>"
-                + "<h4 style='margin: -30px 0 0px 51px;font-style: normal'>aaaa</h4></div>"
+                + "<h4 style='margin: -30px 0 0px 51px;font-style: normal'>"+globalConfig.video+"</h4></div>"
                 + "<div class='distract02'>"
                 + "<img src='img/card04.png' alt='' style='width: 40px;margin-top: 5px;height: 32px;'>"
-                + "<h4 style='margin: -30px 0 0 51px;font-style: normal'>hhhhh</h4></div>"
+                + "<h4 style='margin: -30px 0 0 51px;font-style: normal'>"+globalConfig.ch+"</h4></div>"
                 + "<div class='distract01'>"
                 + "<img src='img/card02.png' alt='' style='width: 40px;height: 32px;'>"
-                + "<h4 style='margin: -30px 0 0 51px;font-style: normal'>hhhhh</h4></div>"
+                + "<h4 style='margin: -30px 0 0 51px;font-style: normal'>"+globalConfig.framerate+"</h4></div>"
                 + "<div class='distract02'>"
-                + "<h4 style='margin: 46px 0 0 51px;font-style: normal'>hhhhh</h4></div>"
+                + "<h4 style='margin: 46px 0 0 51px;font-style: normal'>"+globalConfig.bit+"</h4></div>"
                 + "<div class='distract01'>"
                 + "<img src='img/card03.png' alt='' style='width: 40px;height: 32px;'>"
-                + "<h4 style='margin: -30px 0 0 51px;font-style: normal'>hhhhh</h4></div>"
+                + "<h4 style='margin: -30px 0 0 51px;font-style: normal'>"+globalConfig.codec+"</h4></div>"
                 + "<div class='distract02'>"
-                + "<h4 style='margin: -27px 0 0 51px;font-style: normal'>hhhhh</h4></div>"
+                + "<h4 style='margin: -27px 0 0 51px;font-style: normal'>"+globalConfig.khz+"</h4></div>"
                 + "</div></div></div></div>"
                 + "<div class='swipeout-actions-right'>"
-                + "<a href='#' class='swipeout-delete' style='background-color: #FFE036;width: 30px'>Action 1</a>"
+                + "<a href='#' class='swipeout-delete' style='background-color: #FFE036;height:181px;width: 30px'>删除</a>"
                 + "</div></li>";
-
 
         var fuckkkkk = document.getElementById("cards_ul");
         fuckkkkk.innerHTML += innerhtml;
