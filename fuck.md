@@ -10,3 +10,7 @@
 3)饼状图
 
 4)http://v2ex.com/t/276591#reply4
+
+
+
+5)动态生成swiper-slide

@@ -15,13 +15,19 @@ var swiper = new Swiper('.swiper-container', {
     direction: 'horizontal',
 
     onSlideChangeEnd: function (swiper) {
+        var _ = $(".swiper-container .swiper-slide-active");
+        animationText = _.children('div.title').html().toString();
+
+        globalConfig.video = animationText;
+
+        animation();
         // alert('事件触发了;');
         //要怎样设置这个回调呢,没有原生的提供,那么要想别的法子了
         $(".swiper-slide-active").click(function () {
             //alert($(this).children('div.title').html());
-            animationText = $(this).children('div.title').html().toString();
-            alert(animationText);
-            animation(animationText);
+            //animationText = $(this).children('div.title').html().toString();
+            //alert(animationText);
+            //animation(animationText);
         });
     }
 });
@@ -39,15 +45,17 @@ var swiper6 = new Swiper('.swiper-container5', {
     onSlideChangeEnd: function (swiper6) {
         var _ = $(".swiper-container5 .swiper-slide-active");
         animationText = _.children('div.title').html().toString();
-        //alert('事件触发了;');
+
+        globalConfig.framerate = animationText;
+
         animation();
         // alert(animationText);
         //要怎样设置这个回调呢,没有原生的提供,那么要想别的法子了
         $(".swiper-slide-active").click(function () {
             //alert($(this).children('div.title').html());
-            animationText = $(this).children('div.title').html().toString();
-            alert(animationText);
-            animation(animationText);
+            //animationText = $(this).children('div.title').html().toString();
+            //alert(animationText);
+            //animation(animationText);
         });
     },
 
@@ -73,13 +81,12 @@ var swiper5 = new Swiper('.swiper-container4', {
     direction: 'horizontal',
 
     onSlideChangeEnd: function (swiper5) {
-        //animation(animationText);
-var _ = $(".swiper-container4 .swiper-slide-active");
+        var _ = $(".swiper-container4 .swiper-slide-active");
         animationText = _.children('div.title').html().toString();
-         //alert('事件触发了;');
-        //alert(animationText);
+
+        globalConfig.codec = animationText;
+
         animation();
-        //要怎样设置这个回调呢,没有原生的提供,那么要想别的法子了
         _.click(function () {
             //alert($(this).children('div.title').html());
 
@@ -103,10 +110,16 @@ var swiper2 = new Swiper('.swiper-container1', {
 
 
     onSlideChangeEnd: function (swiper2) {
-        // alert('事件触发了;');
+        var _ = $(".swiper-container1 .swiper-slide-active");
+        animationText = _.children('div.title').html().toString();
+
+        globalConfig.ch = animationText;
+
+        animation();
+        //globalConfig.ch = $(this).children('div.title').html().toString();
         //要怎样设置这个回调呢,没有原生的提供,那么要想别的法子了
         $(".swiper-slide-active").click(function () {
-            globalConfig.ch = $(this).children('div.title').html().toString();
+
         });
     }
 });
@@ -122,11 +135,16 @@ var swiper3 = new Swiper('.swiper-container2', {
 
 
     onSlideChangeEnd: function (swiper3) {
-        // alert('事件触发了;');
-        //要怎样设置这个回调呢,没有原生的提供,那么要想别的法子了
+        //globalConfig.khz = $(this).children('div.title').html().toString();
+        var _ = $(".swiper-container2 .swiper-slide-active");
+        animationText = _.children('div.title').html().toString();
+
+        globalConfig.khz = animationText;
+
+        animation();
         $(".swiper-slide-active").click(function () {
             //alert($(this).children('div.title').html());
-            globalConfig.khz = $(this).children('div.title').html().toString();
+
         });
     }
 });
@@ -141,11 +159,16 @@ var swiper4 = new Swiper('.swiper-container3', {
     autoHeight: true,
 
     onSlideChangeEnd: function (swiper4) {
-        // alert('事件触发了;');
-        //要怎样设置这个回调呢,没有原生的提供,那么要想别的法子了
+        var _ = $(".swiper-container3 .swiper-slide-active");
+        animationText = _.children('div.title').html().toString();
+
+        globalConfig.bit = animationText;
+
+        animation();
+        //globalConfig.bit = $(this).children('div.title').html().toString();
+
         $(".swiper-slide-active").click(function () {
             //alert($(this).children('div.title').html().toString());
-            globalConfig.bit = $(this).children('div.title').html().toString();
             alert(globalConfig.bit)
         });
     }
