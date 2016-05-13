@@ -6,10 +6,22 @@ var myApp = new Framework7({
     template7Pages: true,
     precompileTemplates: true
 });
-
+var unit;
 var indexvideo, framerateindex, codecindex, indexch, indexkhz, indexbit;
 var videos, codecs, framerates, chs, khzs, bits;
 var resolutionratios;
+var s = [videos, codecs, framerates, chs, khzs, bits];
+var compressionRatios, colorSamplingRatios, videobits;
+var bitrate;
+
+compressionRatios = ["1", "26", "12", "8", "5.4", "5.4", "5", "35", "6.6", "13", "18", "22", "6.9", "6", "5", "5", "3", "4", "5", "6",
+    "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "2.9", "7.2", "5"];
+colorSamplingRatios = ["444", "422", "422", "422", "422", "4444", "4444", "4444", "420", "422",
+    "422", "420", "422", "422", "422", "422", "444", "422", "422", "422", "422", "444", "422", "422", "422", "422", "422", "422", "422", "422", "422", "422", "422", "422",
+    "422", "422", "422", "422", "422", "422", "422",];
+videobits = ["8", "10", "10", "10", "10", "12", "12", "8", "8", "8", "8", "10", "10", "10", "10", "10"
+    , "10", "10", "10", "10", "10", "16", "16", "16", "16", "16", "16", "16", "16", "16", "16", "16", "16", "16", "16", "16", "16", "16", "16", "16"];
+unit = ["SCEDONS", "MINUTES", "HOURS"];
 videos = ["720P", "1080P", "2K", "DCI&nbsp;2K&nbsp;1.85", "DCI&nbsp;2K&nbsp;2.39", "UHD", "DCI&nbsp;4K&nbsp;1.85", "DCI&nbsp;4K&nbsp;1.9", "DCI&nbsp;4k&nbsp;2.39", "RED&nbsp;2K&nbsp;2.4",
     "RED&nbsp;3K&nbsp;2.4", "RED&nbsp;3K&nbsp;1.9", "RED&nbsp;4K&nbsp;2.4", "RED&nbsp;4.5K&nbsp;2.4", "RED&nbsp;4.5K&nbsp;1.9", "RED&nbsp;5K&nbsp;2.4", "RED&nbsp;5K&nbsp;1.9", "RED&nbsp;6K&nbsp;2.4", "RED&nbsp;6K&nbsp;1.9", "ARRI&nbsp;2.8K", "ARRI&nbsp;3.2K", "ARRI&nbsp;OG"];
 framerates = ["13.8", "14.98", "15", "24", "25", "29.97", "30", "48", "50", "59.94", "60", "96", "100", "120", "240", "400"];
@@ -25,15 +37,30 @@ resolutionratios = ["1280*720", "1920*1080", "2048*1152", "1998*1080", "2048*858
     "3996*2160", "4096*2160", "4096*1716", "2048*864", "3072*1296", "3072*1620", "4096*1728", "4608*1944", "4608*2412", "5120*2160",
     "5120*2700", "6144*2592", "6144*3160", "2880*1620", "3200*1800", "3424*2202"];
 
+var unit_div = document.getElementById("unit_div");
+var piechartRatio = document.getElementById("piechartRatio");
+var bitrate_p = document.getElementById("bitrate");
+var time_input = document.getElementById("time_input");
+
 function configration(video, framerate, codec, ch, khz, bit) {
     this.video = video;
     this.framerate = framerate;
     this.codec = codec;
+
     this.ch = ch;
     this.khz = khz;
     this.bit = bit;
-
 }
+
+function getIndex(name) {
+    for (var i = 0; i < videos.length; i++) {
+        var everyname = videos[i];
+        if (everyname == name) {
+            return i;
+        }
+    }
+}
+
 
 //定义一个全局的configration对象
 var globalConfig = new configration('1080P', '14.98', 'ProRes&nbsp;422&nbsp;Proxy', '1ch', '48khz', '16bit');
@@ -247,84 +274,191 @@ function addFav() {
 //var KeyBoard = function(input){
 //    var body
 //}
-function addSwiperSlide01(){
+function addSwiperSlide01() {
     //var swiper = $(".swiper-container > .swiper-wrapper");
-    var swiperrrr= document.getElementById("wrapper01");
+    var swiperrrr = document.getElementById("wrapper01");
     //var el = document.createElement("li");
     //el.class = "swipeout";
     //el.style = "background-color: #88D7F4;padding-bottom: 16px";
 
     //swiperrrr.innerHTML += "<div class='swiper-slide' id='swiperItem01'><div class='title'>D</div></div>";
 
-    for(var i = 2 ; i < videos.length ; i++){
+    for (var i = 2; i < videos.length; i++) {
 
-        swiperrrr.innerHTML += "<div class='swiper-slide' id='swiperItem01'><div class='title'>"+videos[i]+"</div></div>";
+        swiperrrr.innerHTML += "<div class='swiper-slide' id='swiperItem01'><div class='title'>" + videos[i] + "</div></div>";
 
     }
 }
+
 
 //var videos, dodecs, framerates, chs, khzs, bits;
-function addSwiperSlide02(){
+function addSwiperSlide02() {
     //var swiper = $(".swiper-container > .swiper-wrapper");
-    var swiperrrr= document.getElementById("wrapper02");
+    var swiperrrr = document.getElementById("wrapper02");
     //var el = document.createElement("li");
     //el.class = "swipeout";
     //el.style = "background-color: #88D7F4;padding-bottom: 16px";
 
     //swiperrrr.innerHTML += "<div class='swiper-slide' id='swiperItem01'><div class='title'>D</div></div>";
 
-    for(var i = 2 ; i < framerates.length ; i++){
+    for (var i = 2; i < framerates.length; i++) {
 
-        swiperrrr.innerHTML += "<div class='swiper-slide' id='swiperItem01'><div class='title'>"+framerates[i]+"</div></div>";
-
+        swiperrrr.innerHTML += "<div class='swiper-slide' id='swiperItem01'><div class='title'>" + framerates[i] + "</div></div>";
     }
 }
 
 
-
-function addSwiperSlide03(){
+function addSwiperSlide03() {
     //var swiper = $(".swiper-container > .swiper-wrapper");
-    var swiperrrr= document.getElementById("wrapper03");
+    var swiperrrr = document.getElementById("wrapper03");
     //var el = document.createElement("li");
     //el.class = "swipeout";
     //el.style = "background-color: #88D7F4;padding-bottom: 16px";
 
     //swiperrrr.innerHTML += "<div class='swiper-slide' id='swiperItem01'><div class='title'>D</div></div>";
 
-    for(var i = 2 ; i < codecs.length ; i++){
+    for (var i = 2; i < codecs.length; i++) {
 
-        swiperrrr.innerHTML += "<div class='swiper-slide' id='swiperItem01'><div class='title'>"+codecs[i]+"</div></div>";
+        swiperrrr.innerHTML += "<div class='swiper-slide' id='swiperItem01'><div class='title' style='font-size: 15.5px;'>" + codecs[i] + "</div></div>";
 
     }
 }
 
-function addSwiperSlide04(){
+function addSwiperSlide04() {
     //var swiper = $(".swiper-container > .swiper-wrapper");
-    var swiperrrr= document.getElementById("wrapper04");
+    var swiperrrr = document.getElementById("wrapper04");
     //var el = document.createElement("li");
     //el.class = "swipeout";
     //el.style = "background-color: #88D7F4;padding-bottom: 16px";
     //swiperrrr.innerHTML += "<div class='swiper-slide' id='swiperItem01'><div class='title'>D</div></div>";
 
-    for(var i = 2 ; i < chs.length ; i++){
+    for (var i = 2; i < chs.length; i++) {
 
-        swiperrrr.innerHTML += "<div class='swiper-slide' id='swiperItem01'><div class='title'>"+chs[i]+"</div></div>";
+        swiperrrr.innerHTML += "<div class='swiper-slide' id='swiperItem01'><div class='title'>" + chs[i] + "</div></div>";
 
     }
 }
 
-function addSwiperSlide05(){
+function addSwiperSlide05() {
     //var swiper = $(".swiper-container > .swiper-wrapper");
-    var swiperrrr= document.getElementById("wrapper05");
+    var swiperrrr = document.getElementById("wrapper05");
     //var el = document.createElement("li");
     //el.class = "swipeout";
     //el.style = "background-color: #88D7F4;padding-bottom: 16px";
     //swiperrrr.innerHTML += "<div class='swiper-slide' id='swiperItem01'><div class='title'>D</div></div>";
 
-    for(var i = 2 ; i < khzs.length ; i++){
+    for (var i = 2; i < khzs.length; i++) {
 
-        swiperrrr.innerHTML += "<div class='swiper-slide' id='swiperItem01'><div class='title'>"+khzs[i]+"</div></div>";
-
+        swiperrrr.innerHTML += "<div class='swiper-slide' id='swiperItem01'><div class='title'>" + khzs[i] + "</div></div>";
     }
 }
 
+//计算时间以及空间
+
+
+//计算比特率
+
+function getBitrate() {
+
+    var index = getIndex(globalConfig.video);
+    var resolutionratio = resolutionratios[index];
+
+    var lateralResolution = resolutionratio.substr(0, 4);
+    var longitudinalResolution = resolutionratio.substr(5);
+    //var fuckbit;
+    //if (globalConfig.bit == "8bit") {
+    //    fuckbit = globalConfig.bit.substring(0, 1);
+    //} else {
+    //    fuckbit = globalConfig.bit.substring(0, 2);
+    //}
+    //alert(globalConfig.framerate);
+    //音频的计算公式是声道数＊采样率＊量化／1024/1024/8=Mb/s
+    var fuckch;
+    if (globalConfig.ch == "12ch" || globalConfig.ch == "16ch") {
+        fuckch = globalConfig.ch.substring(0, 2);
+    } else {
+        fuckch = globalConfig.ch.substring(0, 1);
+    }
+    //var audioBitrate = globalConfig.ch
+
+
+    var fuckkhz = globalConfig.khz.substring(0, globalConfig.khz.length - 3);
+
+
+    var fuckbit = globalConfig.bit.substring(0, globalConfig.bit.length - 3);
+
+
+    var fuckcolorSamplingRatios = colorSamplingRatios[codecIndexx];
+    var multiplicator = 0;
+    switch (fuckcolorSamplingRatios) {
+        case "444":
+            multiplicator = 1;
+            break;
+        case "422":
+            multiplicator = 2 / 3;
+            break;
+        case "420":
+            multiplicator = 1 / 3;
+            break;
+        case "4444":
+            multiplicator = 3 / 4;
+            break;
+    }
+
+    var videoBitrate = (Number(lateralResolution)) * (Number(longitudinalResolution))
+        * (Number(globalConfig.framerate)) * (Number(videobits[codecIndexx])) * 3 * multiplicator / 8 / 1024 / 1024;
+
+    var audioBitrate = Number(fuckbit) * Number(fuckch) * Number(fuckkhz) / 1024 / 1024 / 8;
+
+    bitrate = videoBitrate + audioBitrate;
+
+    bitrate_p.innerHTML = (videoBitrate + audioBitrate).toString().substring(0, 5);
+}
+
+
+//一共10个地方要用到计算方法:6swiper,3时间单位,1storageInput
+function cacTime(room, unit) {
+    //switch (input) {
+    //    case time_input:
+    //        //var timevalue = storage_input.value;
+    //        //
+    //        //storage_input.value = "44444444";
+    //        break;
+    //    case storage_input:
+    //
+    //        time_input.value = "2222222";
+    //        break;
+    //}
+    //这10个场景都传入空间大小及时间单位
+    var time_s = Number(room) * 1024 / bitrate;
+    switch (unit) {
+        case "SECONDS":
+            time_input.value = time_s;
+            break;
+        case "MINUTES":
+            time_input.value = time_s / 60;
+            break;
+        case "HOURS":
+            time_input.value = time_s / 60 / 60;
+            break;
+    }
+}
+
+function cacStorage(time, unit) {
+    var time_s;
+    switch (unit) {
+        case "SECONDS":
+            time_s = time;
+            break;
+        case "MINUTES":
+            time_s = time * 60;
+            break;
+        case "HOURS":
+            time_s = time * 60 * 60;
+            break;
+    }
+
+    var storage = time_s * bitrate/1024;
+
+    storage_input.value = storage.toString();
+}

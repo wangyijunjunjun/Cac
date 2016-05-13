@@ -26,7 +26,7 @@ function redrawPiechart(options){
         fillPercent: options,
         backgroundStrokeColor: "#88D7F4",
         foregroundStrokeColor: "#F4F4F4",
-        animationRate: 322,
+        animationRate: 1,
         radius: 66,
         stroke: 26,
         container: document.getElementById("piechart")

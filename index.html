@@ -27,9 +27,7 @@
 <!--.tableDotDiv{-->
 <!--height: 256px;-->
 <!--}-->
-
 <!--}-->
-
 <!--</style>-->
 <body onload="loaded()" style="width:100%;height:100%;background-color:#ffffff">
 
@@ -92,7 +90,9 @@
                     <a href="#fav"><i class="icon icon-bars"></i></a>
                     <!--<a href="help.html" class="link">hh</a>-->
                 </div>
-                <div class="center sliding contacts-list-header">CODECALC</div>
+                <div class="center sliding contacts-list-header"
+                     style="left: 0px;font-weight: 300;color: white; font-size: 19px;">CODECALC
+                </div>
                 <div class="right">
                     <!--<a href="#" data-page="right" class="link icon-only open-panel open-right-panel"><i class="icon icon-bars"></i></a>-->
 
@@ -150,10 +150,10 @@
                 <div class="page-content" id="fuckcontent">
                     <!--三个tab-->
                     <div class="tabs">
-                        <ul id="tabs">
-                            <li class="tab-nav-action">CODE</li>
-                            <li class="tab-nav">CAC</li>
-                            <li class="tab-nav">VIDEO</li>
+                        <ul id="tabs" style="font-size: 17px">
+                            <li class="tab-nav-action">VIDEO</li>
+                            <li class="tab-nav">FRAME RATE</li>
+                            <li class="tab-nav">CODEC</li>
                         </ul>
                     </div>
                     <div id="tabs-body" class="tabs-body">
@@ -161,7 +161,8 @@
 
                             <div class="tableDotDiv">
                                 <!--上方的图-->
-                                <img src="img/1080p.png" alt="" style="width: 100% ; margin-bottom: -10px;">
+                                <img id="videoimg" src="img/1080p.png" alt=""
+                                     style="width: 56% ;padding-left: 22%;padding-top:57.76px ; margin-bottom: -10px;">
                             </div>
                             <div class="swiperbody">
                                 <!-- Swiper -->
@@ -253,9 +254,9 @@
                                 <!--piechart-->
                                 <div id="piechart">
                                 </div>
-                                <p style="position:absolute;top: 176px;margin: 0px 0px -35px 182px;z-index: 999;font-size: 28px">
+                                <p id="piechartRatio" >
                                     5.4:1</p>
-                                <p style="color:#F4F4F4;position:absolute;top: 206px;margin: 0px 0px -35px 182px;z-index: 999;font-size: 11px">
+                                <p id="piechartRatioBottom" >
                                     Compression <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ratio</p>
                                 <!--现在来玩玩div重叠-->
                                 <!--<div style="width: 40px;height: 30px;background-color: #000000"></div>-->
@@ -265,10 +266,10 @@
                             <div class="swiper-container4">
                                 <div class="swiper-wrapper" id="wrapper03">
                                     <div class="swiper-slide">
-                                        <div class="title">Uncompressed</div>
+                                        <div class="title" style="font-size: 15.5px;">Uncompressed</div>
                                     </div>
                                     <div class="swiper-slide">
-                                        <div class="title">ProRes&nbsp;422&nbsp;Proxy</div>
+                                        <div class="title" style="font-size: 15.5px;">ProRes&nbsp;422&nbsp;Proxy</div>
                                     </div>
                                     <!--<div class="swiper-slide">-->
                                     <!--<div class="title">12ch</div>-->
@@ -280,14 +281,10 @@
                                     <!--<div class="title">20ch</div>-->
                                     <!--</div>-->
                                 </div>
-
                                 <!-- Add Arrows -->
                                 <div class="swiper-button-next"></div>
-
                                 <div class="swiper-button-prev"></div>
-
                             </div>
-
                         </div>
                     </div>
 
@@ -319,7 +316,6 @@
                     <!--<div class="swiper-button-prev"></div>-->
                     <!--</div>-->
                     <!--</div>-->
-
                     <div class="middle">
                         <div style="float: left;width: 100%;height: 7px;background-color: #ffffff"></div>
                         <div id="middle_bar"><p>AUDIO</p></div>
@@ -464,7 +460,7 @@
                             </div>
 
                             <div class="bottom_middle_text">
-                                <p>91.2</p>
+                                <p id="bitrate">91.2</p>
                             </div>
                             <div class="bottom_bottom_text">
                                 <p>MB/s</p>
@@ -477,14 +473,14 @@
                             </div>
 
                             <input id="time_input" type="number" readonly="readonly"
-                                   style="background:transparent;border:1px  #475E6D;width: 98px;height: 30px;color: #ffffff"/>
+                                   style="background:transparent;border:1px  #475E6D;text-align: center;width: 83px;height: 30px;color: #ffffff"/>
                             <!--<div class="bottom_middle_text" >-->
                             <!--<p id="time">30</p>-->
 
                             <!--&lt;!&ndash;<input title="ss" style="background:transparent;border:1px solid #ffffff;width: 12px;height: 12px"/>&ndash;&gt;-->
                             <!--</div>-->
                             <div class="bottom_bottom_text">
-                                <p>HOURS</p>
+                                <p id="unit_div">HOURS</p>
                             </div>
                         </div>
 
@@ -495,14 +491,12 @@
                             <!--<div class="bottom_middle_text">-->
                             <!--<p id="storage">420</p>-->
                             <!--</div>-->
-                            <input id="storage_input" readonly="readonly" type="number" placeholder="430"
-                                   style="background:transparent;border:1px  #475E6D;width: 55px;height: 30px;color: #ffffff"/>
-
+                            <input id="storage_input" readonly="readonly" type="number"
+                                   style="background:transparent;margin-left: 5px;;border:1px  #475E6D;text-align:center;width: 61px;height: 30px;color: #ffffff"/>
                             <div class="bottom_bottom_text">
                                 <p>GB</p>
                             </div>
                         </div>
-
                     </div>
 
                     <!--<div class="bottom_shadow" style="position: absolute;bottom: 0;width: 100%;height:200px;background-color: black;z-index: 999"></div>-->
@@ -595,7 +589,8 @@
                                     </div>
                                 </div>
                                 <div class="swipeout-actions-right">
-                                    <a href="#" class="swipeout-delete" style="background-color: #FFE036 ; height:181px;width: 30px">Action
+                                    <a href="#" class="swipeout-delete"
+                                       style="background-color: #FFE036 ; height:181px;width: 30px">Action
                                         1</a>
                                 </div>
                             </li>
@@ -685,7 +680,6 @@
         </div>
     </li>
 </script>
-
 <script>
     //    var swiper = new Swiper('.swiper-container', {
     //        nextButton: '.swiper-button-next',
@@ -707,7 +701,7 @@
     var lis = $("#cards_ul > li");
     var clickCount = 0;
     window.onload = function () {
-        renderDotTable("A");
+        renderDotTable(1);
 
         //键盘
 //        var time_input = document.getElementById("time_input");
@@ -721,6 +715,7 @@
 //            new KeyBoard(storage_input);
 //        }
 
+        getBitrate();
 
 //        cards_ul var divs = $("#tabs-body > div");
 
@@ -753,20 +748,20 @@
                 + "<div class='sixConfig' style='margin: 24px 0 0 16px;'>"
                 + "<div class='distract01'>"
                 + "<img src='img/card01.png' alt='' style='width: 40px;height: 32px;'>"
-                + "<h4 style='margin: -30px 0 0px 51px;font-style: normal'>"+globalConfig.video+"</h4></div>"
+                + "<h4 style='margin: -30px 0 0px 51px;font-style: normal'>" + globalConfig.video + "</h4></div>"
                 + "<div class='distract02'>"
                 + "<img src='img/card04.png' alt='' style='width: 40px;margin-top: 5px;height: 32px;'>"
-                + "<h4 style='margin: -30px 0 0 51px;font-style: normal'>"+globalConfig.ch+"</h4></div>"
+                + "<h4 style='margin: -30px 0 0 51px;font-style: normal'>" + globalConfig.ch + "</h4></div>"
                 + "<div class='distract01'>"
                 + "<img src='img/card02.png' alt='' style='width: 40px;height: 32px;'>"
-                + "<h4 style='margin: -30px 0 0 51px;font-style: normal'>"+globalConfig.framerate+"</h4></div>"
+                + "<h4 style='margin: -30px 0 0 51px;font-style: normal'>" + globalConfig.framerate + "</h4></div>"
                 + "<div class='distract02'>"
-                + "<h4 style='margin: 46px 0 0 51px;font-style: normal'>"+globalConfig.bit+"</h4></div>"
+                + "<h4 style='margin: 46px 0 0 51px;font-style: normal'>" + globalConfig.bit + "</h4></div>"
                 + "<div class='distract01'>"
                 + "<img src='img/card03.png' alt='' style='width: 40px;height: 32px;'>"
-                + "<h4 style='margin: -30px 0 0 51px;font-style: normal'>"+globalConfig.codec+"</h4></div>"
+                + "<h4 style='margin: -30px 0 0 51px;font-style: normal'>" + globalConfig.codec + "</h4></div>"
                 + "<div class='distract02'>"
-                + "<h4 style='margin: -27px 0 0 51px;font-style: normal'>"+globalConfig.khz+"</h4></div>"
+                + "<h4 style='margin: -27px 0 0 51px;font-style: normal'>" + globalConfig.khz + "</h4></div>"
                 + "</div></div></div></div>"
                 + "<div class='swipeout-actions-right'>"
                 + "<a href='#' class='swipeout-delete' style='background-color: #FFE036;height:181px;width: 30px'>删除</a>"
@@ -777,13 +772,52 @@
     }
 
     //    点阵
-    var chars = {};
-    chars.A = [[1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]];
-    chars.B = [[1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]];
-    chars.C = [[1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]];
-    chars.D = [[1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]];
-    chars.F = [[1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]];
+    var chars = [];
+    chars.push([[1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]);
 
+    chars.push([[1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]);
+    chars.push([[1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]);
+    chars.push([[1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]);
+
+    chars.push([[1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]);
+
+    chars.push([[1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]);
+
+    chars.push([[1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]);
+
+    chars.push([[1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0]]);
+
+    chars.push([[1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0]]);
+    chars.push([[1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0],
+        [1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0]]);
+
+    chars.push([[1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0],
+        [1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0], [1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0]]);
+    chars.push([[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0],
+        [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0]]);
+
+    chars.push([[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0],
+        [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0]]);
+    chars.push([[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+        [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]]);
+    chars.push([[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+        [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]]);
+    chars.push([[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+        [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]]);
+
+    //    var array = [];
+    //    array.push('a');
+    //    array.push('b');
+    //    array.push('c');
 
     function renderDotTable(index) {
         var charHex = chars[index];
@@ -803,16 +837,20 @@
 
     //关于js中的{}和[]:   首先两者都是对象 , 其中都有元素 , 唯一不同的是 , {}里面需要键值对 , []里面不需要键值对
 
-    var time_input = document.getElementById("time_input");
 
     time_input.onclick = function () {
+        time_input.value = "";
 //        alert("fuck");
 //        var show_input = document.getElementById("show_input");
         new KeyBoard(time_input);
     }
 
+    //    storage_input
+    var storage_input = document.getElementById("storage_input");
+    storage_input.onclick = function () {
+        storage_input.value = "";
+        new KeyBoard(storage_input);
+    }
+
 </script>
 </html>
-
-
-https://drscdn.500px.org/photo/125979219/m%3D2048/c87aa80b1a97b9a85f39a712bde7eb96
